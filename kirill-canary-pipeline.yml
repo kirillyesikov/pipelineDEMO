@@ -13,12 +13,12 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: harnessguestbook
+            serviceRef: kirill-app
           environment:
             environmentRef: kirilldevenv
             deployToAll: false
             infrastructureDefinitions:
-              - identifier: harnessk8sinfra
+              - identifier: kirillk8sinfra
           execution:
             steps:
               - stepGroup:
