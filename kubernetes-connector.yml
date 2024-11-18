@@ -1,0 +1,12 @@
+connector:
+  name: kirill_k8sconnector
+  identifier: kirillk8sconnector
+  description: ""
+  orgIdentifier: default
+  projectIdentifier: ProxMOx
+  type: K8sCluster
+  spec:
+    credential:
+      type: InheritFromDelegate
+    delegateSelectors:
+      - helm-delegate
