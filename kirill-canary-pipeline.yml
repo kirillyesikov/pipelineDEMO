@@ -15,7 +15,7 @@ pipeline:
           service:
             serviceRef: harnessguestbook
           environment:
-            environmentRef: harnessdevenv
+            environmentRef: kirilldevenv
             deployToAll: false
             infrastructureDefinitions:
               - identifier: harnessk8sinfra
