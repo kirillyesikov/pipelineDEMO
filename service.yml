@@ -6,7 +6,7 @@ service:
         spec:
             manifests:
                 - manifest:
-                    identifier: kirill-app
+                    identifier: app
                     type: K8sManifest
                     spec:
                       store:
