@@ -1,0 +1,9 @@
+environment:
+  name: kirilldevenv
+  identifier: kirilldevenv
+  description: ""
+  tags: {}
+  type: PreProduction
+  orgIdentifier: default
+  projectIdentifier: ProxMOx
+  variables: []
