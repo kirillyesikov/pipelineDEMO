@@ -1,0 +1,15 @@
+infrastructureDefinition:
+  name: kirill_k8sinfra
+  identifier: kirillk8sinfra
+  description: ""
+  tags: {}
+  orgIdentifier: default
+  projectIdentifier: ProxMOx
+  environmentRef: kirilldevenv
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: kirillk8sconnector
+    namespace: default
+    releaseName: release-<+INFRA_KEY>
+  allowSimultaneousDeployments: false
