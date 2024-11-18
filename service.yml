@@ -1,0 +1,24 @@
+service:
+    name: kirill_app
+    identifier: kirillapp
+    serviceDefinition:
+        type: Kubernetes
+        spec:
+            manifests:
+                - manifest:
+                    identifier: kirill-app
+                    type: K8sManifest
+                    spec:
+                      store:
+                        type: Github
+                        spec:
+                            connectorRef: kirillgitconnector
+                            gitFetchType: Branch
+                            paths:
+                                - deployment.yaml
+                                - service.yaml
+                            repoName: pipelineDEMO
+                            branch: main
+                        skipResourceVersioning: false
+                        enableDeclarativeRollback: false
+    gitOpsEnabled: false
