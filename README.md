@@ -22,7 +22,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 # On a blank ProxMox VM of an Ubuntu Flavour (Ubuntu 23.10 live server) deploy a Kubernetes Cluster 
 # I used kubeadm since i was very interested in doing it the "hard way" and learning as much as possible. (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 # Install the compatible CRI and the OCI runtimes (I used containerd and runc) and install cni-plugins. Generate and make appropriate changes to the /etc/containerd/config.toml 
-
+```
 apt install net-tools
 sudo swapoff -a
 cd /usr/local/
@@ -50,10 +50,10 @@ tar zxvf cni-plugins-linux-amd64-v1.6.0.tgz
 mkdir /etc/containerd
 touch etc/containerd/config.toml
 containerd config default > /etc/containerd/config.toml
-
+```
 # Configure the systemd cgroup driver
 # To use the systemd cgroup driver in /etc/containerd/config.toml with runc, set
-
+```
 [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
   ...
   
@@ -63,44 +63,49 @@ containerd config default > /etc/containerd/config.toml
 sudo systemctl restart containerd
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg                         ### apt-transport-https may be a dummy package; if so, you can skip that package
-
+```
 # Download the public signing key for the Kubernetes package repositories. The same signing key is used for all repositories so you can disregard the version in the URL:
 # If the directory `/etc/apt/keyrings` does not exist, it should be created before the curl command, read the note below.
 # sudo mkdir -p -m 755 /etc/apt/keyrings
+```
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-
+```
 # Add the appropriate Kubernetes apt repository. 
 # This overwrites any existing configuration in /etc/apt/sources.list.d/kubernetes.list
+```
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
-
+```
 # Update the apt package index, install kubelet, kubeadm and kubectl, and pin their version:
+```
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
-
+```
 # Configure the Kubelet cgroup driver ( either through kubeadm-config.yaml , if you are using a file to execute kubeadm init OR under /var/lib/kubelet/config.yaml)
-
+```
 cgroupDriver: systemd
-
+```
 # Enable IPv4 packet forwarding
 # sysctl params required by setup, params persist across reboots
+```
 cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
 net.ipv4.ip_forward = 1
 EOF
 sudo sysctl --system
 sysctl net.ipv4.ip_forward
-
+```
 # To initialize the control-plane node run ( you can use kubeadm-config.yaml and explicitly define your cluster cofiguration more https://kubernetes.io/docs/reference/config-api/kubeadm-config.v1beta3/ OR you can run flags with kubeadm init )
-
+```
 kubeadm init --apiserver-advertise-address=<your VM private address IP of eth0)
 export KUBECONFIG=/etc/kubernetes/admin.conf (use this command as a root user to enable kubectl command-line tool)
-
+```
 
 # Install CNI for the Kubernetes cluster
+```
 curl https://raw.githubusercontent.com/projectcalico/calico/v3.29.0/manifests/calico.yaml -O
 kubectl apply -f calico.yaml
 kubectl get pods -A
-
+```
 # CLUSTER IS READY!!!
 
 
