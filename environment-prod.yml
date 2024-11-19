@@ -1,0 +1,8 @@
+environment:
+  name: kirillprodenv
+  identifier: kirillprodenv
+  tags: {}
+  type: Production
+  orgIdentifier: default
+  projectIdentifier: default_project
+  variables: []
