@@ -1,13 +1,13 @@
 pipeline:
   name: cicd-gitops-pipeline
   identifier: cicdgitopspipeline
-  projectIdentifier: default_project
+  projectIdentifier: ProxMOx
   orgIdentifier: default
   tags: {}
   properties:
     ci:
       codebase:
-        connectorRef: githubconnector
+        connectorRef: kirillgitconnector
         build: <+input>
   stages:
     - stage:
@@ -34,7 +34,7 @@ pipeline:
                     config: default
                     target:
                       type: repository
-                      workspace: apps/podinfo
+                      workspace: pipelineDEMO
                       name: Harness GitOps Workshop
                       variant: main
                     advanced:
@@ -50,14 +50,14 @@ pipeline:
                     repo: <+pipeline.variables.imageRepo>
                     tags:
                       - <+pipeline.variables.imageTag>
-                    dockerfile: apps/podinfo/Dockerfile
-                    context: apps/podinfo
+                    dockerfile: Dockerfile
+                    context: pipelineDEMO
   variables:
     - name: imageRepo
       type: String
       description: ""
       required: false
-      value: DOCKER_USERNAME/harness-gitops-workshop
+      value: kyesikov/notes-app
     - name: imageTag
       type: String
       description: ""
