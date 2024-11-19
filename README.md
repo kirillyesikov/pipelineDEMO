@@ -5,8 +5,8 @@ Running my homelab/cloud with an AMD Ryzen Mini PC 16GB using PROXMOX as an orch
 
 # On a blank ProxMox VM of an Ubuntu Flavour (Ubuntu 23.10 live server) install Docker 
 
-# Uninstall all confilcting packages:
-```for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done```
+
+```for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done``` # Uninstall all confilcting packages
 
 # Add Docker's official GPG key:
 sudo apt-get update
