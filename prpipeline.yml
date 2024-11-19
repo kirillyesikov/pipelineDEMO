@@ -1,13 +1,13 @@
 pipeline:
-  name: cicd-gitops-pipeline
+  name: cicd-pipeline
   identifier: cicdgitopspipeline
-  projectIdentifier: default_project
+  projectIdentifier: ProxMOx
   orgIdentifier: default
   tags: {}
   properties:
     ci:
       codebase:
-        connectorRef: githubconnector
+        connectorRef: kirillconnector
         build: <+input>
   stages:
     - stage:
@@ -34,8 +34,8 @@ pipeline:
                     config: default
                     target:
                       type: repository
-                      workspace: apps/podinfo
-                      name: Harness GitOps Workshop
+                      workspace: kyesikov/notes-app
+                      name: PIPE
                       variant: main
                     advanced:
                       log:
@@ -50,8 +50,8 @@ pipeline:
                     repo: <+pipeline.variables.imageRepo>
                     tags:
                       - <+pipeline.variables.imageTag>
-                    dockerfile: apps/podinfo/Dockerfile
-                    context: apps/podinfo
+                    dockerfile: Dockerfile
+                    context: kyesikov/notes-app
     - stage:
         name: DeployDev
         identifier: DeployDev
@@ -61,7 +61,7 @@ pipeline:
           deploymentType: Kubernetes
           gitOpsEnabled: true
           service:
-            serviceRef: podinfoservice
+            serviceRef: kirill-app
           execution:
             steps:
               - step:
@@ -79,11 +79,10 @@ pipeline:
                           rm -rf harness-gitops-workshop
                           git config --global user.email ci-bot@argocd.com && git config --global user.name ci-bot
                           echo "cloning repo..."
-                          GITHUBPAT=<+secrets.getValue("github_pat")>
-                          git clone https://oauth2:$GITHUBPAT@github.com/GITHUB_USERNAME/harness-gitops-workshop.git
-                          cd harness-gitops-workshop
+                          GITHUBPAT=<+secrets.getValue("kirill_gitpat")>
+                          git clone https://oauth2:$GITHUBPAT@github.com/kirillyesikov/pipelineDEMO.git
                           ls
-                          FILE_PATH="configs/git-generator-files-discovery/apps/podinfo/deployment.yaml"
+                          FILE_PATH="deployment.yaml"
 
                           # Detect OS and set the sed in-place edit command accordingly
                           if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -127,10 +126,10 @@ pipeline:
                   spec: {}
             rollbackSteps: []
           environment:
-            environmentRef: dev
+            environmentRef: kirilldevenv
             deployToAll: false
-            gitOpsClusters:
-              - identifier: gitopscluster
+            infrastructureDefinitions:
+              - identifier: kirillk8sinfra
         tags: {}
         failureStrategies:
           - onFailure:
@@ -173,7 +172,7 @@ pipeline:
           deploymentType: Kubernetes
           gitOpsEnabled: true
           service:
-            serviceRef: podinfoservice
+            serviceRef: kirill-app
           execution:
             steps:
               - step:
@@ -201,10 +200,10 @@ pipeline:
                   spec: {}
             rollbackSteps: []
           environment:
-            environmentRef: prod
+            environmentRef: kirillprodenv
             deployToAll: false
-            gitOpsClusters:
-              - identifier: gitopscluster
+            infrastructureDefinitions:
+              - identifier: kirillk8sinfra
         tags: {}
         failureStrategies:
           - onFailure:
@@ -217,7 +216,7 @@ pipeline:
       type: String
       description: ""
       required: false
-      value: DOCKER_USERNAME/harness-gitops-workshop
+      value: kyesikov/notes-app
     - name: imageTag
       type: String
       description: ""
