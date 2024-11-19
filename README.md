@@ -1,4 +1,4 @@
-# pipelineDEMO 
+# BETTER README coming 
 CI/CD pipeline using Harness 
 
 # Running my homelab/cloud with an AMD Ryzen Mini PC 16GB using PROXMOX as an orchestration solution for my VM's.
