@@ -1,0 +1,16 @@
+connector:
+  name: docker_connector
+  identifier: docker_connector
+  description: ""
+  orgIdentifier: default
+  projectIdentifier: default_project
+  type: DockerRegistry
+  spec:
+    dockerRegistryUrl: https://index.docker.io/v2/
+    providerType: DockerHub
+    auth:
+      type: UsernamePassword
+      spec:
+        username: DOCKER_USERNAME
+        passwordRef: docker_secret
+    executeOnDelegate: false
