@@ -1,7 +1,7 @@
 # pipelineDEMO
 CI/CD pipeline using Harness 
 
-Running my homelab/cloud with an AMD Ryzen Mini PC 16GB using PROXMOX as an orchestration solution for my VM's.
+# Running my homelab/cloud with an AMD Ryzen Mini PC 16GB using PROXMOX as an orchestration solution for my VM's.
 
 # On a blank ProxMox VM of an Ubuntu Flavour (Ubuntu 23.10 live server) install Docker 
 
