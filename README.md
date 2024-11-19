@@ -4,7 +4,7 @@ CI/CD pipeline using Harness
 # Running my homelab/cloud with an AMD Ryzen Mini PC 16GB using PROXMOX as an orchestration solution for my VM's.
 
 # On a blank ProxMox VM of an Ubuntu Flavour (Ubuntu 23.10 live server) install Docker 
-
+```
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -17,7 +17,7 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
+```
 
 # On a blank ProxMox VM of an Ubuntu Flavour (Ubuntu 23.10 live server) deploy a Kubernetes Cluster 
 # I used kubeadm since i was very interested in doing it the "hard way" and learning as much as possible. (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
