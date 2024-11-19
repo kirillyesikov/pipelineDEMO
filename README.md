@@ -109,7 +109,7 @@ kubectl get pods -A
 # CLUSTER IS READY!!!
 
 
-### Build and push the Docker images to a DockerHub registry (you will have create an account https://hub.docker.com/ )
+### Build and push the Docker images to a DockerHub registry (you will have to create an account https://hub.docker.com/ )
 docker build -t kirillyesikov/notes .
 docker push kirillyesikov/notes:latest
 
