@@ -3,7 +3,7 @@ connector:
   identifier: docker_connector
   description: ""
   orgIdentifier: default
-  projectIdentifier: default_project
+  projectIdentifier: ProxMOx
   type: DockerRegistry
   spec:
     dockerRegistryUrl: https://index.docker.io/v2/
@@ -11,6 +11,6 @@ connector:
     auth:
       type: UsernamePassword
       spec:
-        username: DOCKER_USERNAME
+        username: kyesikov
         passwordRef: docker_secret
     executeOnDelegate: false
