@@ -134,9 +134,10 @@ echo 'export PATH="'$(pwd)':$PATH"' >> ~/.bash_profile
 harness login --api-key HARNESS-API-KEY --account-id HARNESS-ACCOUNT-ID
 
 ### Clone the repo
+```
 git clone https://github.com/kirillyesikov/pipelineDEMO.git
 cd pipelineDEMO
-
+```
 ### We will be creating a Harness secret ( using the PAT from your github repository)
 harness secret apply --token GITHUB-PAT --secret-name "kirill_gitpat"
 
