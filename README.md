@@ -5,7 +5,7 @@ Running my homelab/cloud with an AMD Ryzen Mini PC 16GB using PROXMOX as an orch
 
 # On a blank ProxMox VM of an Ubuntu Flavour (Ubuntu 23.10 live server) install Docker 
 
-```for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 sudo apt-get update
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -16,14 +16,14 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin ```
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 
 # On a blank ProxMox VM of an Ubuntu Flavour (Ubuntu 23.10 live server) deploy a Kubernetes Cluster 
 # I used kubeadm since i was very interested in doing it the "hard way" and learning as much as possible. (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 # Install the compatible CRI and the OCI runtimes (I used containerd and runc) and install cni-plugins. Generate and make appropriate changes to the /etc/containerd/config.toml 
 
-```apt install net-tools
+apt install net-tools
 sudo swapoff -a
 cd /usr/local/
 wget https://github.com/containerd/containerd/releases/download/v2.0.0/containerd-2.0.0-linux-amd64.tar.gz
@@ -59,16 +59,11 @@ containerd config default > /etc/containerd/config.toml
   [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
     SystemdCgroup = true
 
-sudo systemctl restart containerd```
-
-# Update the apt package index and install packages needed to use the Kubernetes apt repository:
-
+sudo systemctl restart containerd
 sudo apt-get update
-# apt-transport-https may be a dummy package; if so, you can skip that package
-sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+sudo apt-get install -y apt-transport-https ca-certificates curl gpg                         ### apt-transport-https may be a dummy package; if so, you can skip that package
 
 # Download the public signing key for the Kubernetes package repositories. The same signing key is used for all repositories so you can disregard the version in the URL:
-
 # If the directory `/etc/apt/keyrings` does not exist, it should be created before the curl command, read the note below.
 # sudo mkdir -p -m 755 /etc/apt/keyrings
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
@@ -91,12 +86,7 @@ cgroupDriver: systemd
 cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
 net.ipv4.ip_forward = 1
 EOF
-
-# Apply sysctl params without reboot
 sudo sysctl --system
-
-# Verify that net.ipv4.ip_forward is set to 1 with:
-
 sysctl net.ipv4.ip_forward
 
 # To initialize the control-plane node run ( you can use kubeadm-config.yaml and explicitly define your cluster cofiguration more https://kubernetes.io/docs/reference/config-api/kubeadm-config.v1beta3/ OR you can run flags with kubeadm init )
