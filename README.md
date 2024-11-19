@@ -6,33 +6,25 @@ Running my homelab/cloud with an AMD Ryzen Mini PC 16GB using PROXMOX as an orch
 # On a blank ProxMox VM of an Ubuntu Flavour (Ubuntu 23.10 live server) install Docker 
 
 
-```for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done``` # Uninstall all confilcting packages
-
-# Add Docker's official GPG key:
+```for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 sudo apt-get update
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
-
-# Add the repository to Apt sources:
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
-
-# Install the latest version:
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin ```
 
 
 # On a blank ProxMox VM of an Ubuntu Flavour (Ubuntu 23.10 live server) deploy a Kubernetes Cluster 
-
 # I used kubeadm since i was very interested in doing it the "hard way" and learning as much as possible. (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
-
 # Install the compatible CRI and the OCI runtimes (I used containerd and runc) and install cni-plugins. Generate and make appropriate changes to the /etc/containerd/config.toml 
 
-apt install net-tools
+```apt install net-tools
 sudo swapoff -a
 cd /usr/local/
 wget https://github.com/containerd/containerd/releases/download/v2.0.0/containerd-2.0.0-linux-amd64.tar.gz
@@ -61,7 +53,6 @@ touch etc/containerd/config.toml
 containerd config default > /etc/containerd/config.toml
 
 # Configure the systemd cgroup driver
-
 # To use the systemd cgroup driver in /etc/containerd/config.toml with runc, set
 
 [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
@@ -69,7 +60,7 @@ containerd config default > /etc/containerd/config.toml
   [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
     SystemdCgroup = true
 
-sudo systemctl restart containerd
+sudo systemctl restart containerd```
 
 # Update the apt package index and install packages needed to use the Kubernetes apt repository:
 
