@@ -1,0 +1,65 @@
+pipeline:
+  name: cicd-gitops-pipeline
+  identifier: cicdgitopspipeline
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: githubconnector
+        build: <+input>
+  stages:
+    - stage:
+        name: ci-stage
+        identifier: cistage
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Owasp
+                  name: Run OWASP Scan
+                  identifier: Run_OWASP_Scan
+                  spec:
+                    mode: orchestration
+                    config: default
+                    target:
+                      type: repository
+                      workspace: apps/podinfo
+                      name: Harness GitOps Workshop
+                      variant: main
+                    advanced:
+                      log:
+                        level: info
+                      fail_on_severity: none 
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry
+                  identifier: BuildAndPushDockerRegistry
+                  spec:
+                    connectorRef: docker_connector
+                    repo: <+pipeline.variables.imageRepo>
+                    tags:
+                      - <+pipeline.variables.imageTag>
+                    dockerfile: apps/podinfo/Dockerfile
+                    context: apps/podinfo
+  variables:
+    - name: imageRepo
+      type: String
+      description: ""
+      required: false
+      value: DOCKER_USERNAME/harness-gitops-workshop
+    - name: imageTag
+      type: String
+      description: ""
+      required: false
+      value: latest
