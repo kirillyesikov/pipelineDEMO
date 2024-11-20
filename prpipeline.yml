@@ -242,5 +242,5 @@ pipeline:
       value: <+trigger.commitSha>  
     - name: releaseManifestFile
       type: String
-      value: "deployment.yaml"
+      value: "pipelineDEMO/deployment.yaml"
 
