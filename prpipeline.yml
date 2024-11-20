@@ -50,7 +50,6 @@ pipeline:
                     tags:
                       - <+pipeline.variables.imageTag>
                     dockerfile: Dockerfile
-                    context: kyesikov/notes-app
     - stage:
         name: DeployDev
         identifier: DeployDev
