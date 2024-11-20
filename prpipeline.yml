@@ -113,16 +113,16 @@ pipeline:
                   spec:
                     infrastructureDefinitions:
                     - identifier: kirill_k8sinfra
-                    manifest: "<+pipeline.variables.releaseManifestFile>"  # Specify the manifest variable or path
+                    manifest: <+pipeline.variables.releaseManifestFile>  # Specify the manifest variable or path
                     repository:
                       connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
                       repoName: pipelineDEMO
-                      branch: "main"                # Branch to update
+                      branch: main               # Branch to update
                       commitMessage: "Update release with new asset"
                     variables:
                       - name: releaseManifestFile
                         type: String
-                        value: "deployment.yaml"
+                        value: deployment.yaml
               - step:
                   type: MergePR
                   name: Merge PR
@@ -229,3 +229,7 @@ pipeline:
       description: ""
       required: false
       value: <+trigger.commitSha>  
+    - name: releaseManifestFile
+      type: String
+      value: "deployment.yaml"
+
