@@ -111,6 +111,12 @@ pipeline:
                   identifier: updateReleaseRepo
                   timeout: 10m
                   spec:
+                  manifest: "<+pipeline.variables.releaseManifestFile>"  # Specify the manifest variable or path
+                  repository:
+                    connectorRef: git_connector   # The Git repository connector for accessing the release repo
+                    repoName: "release-repo-name" # The Git repository name where release manifests are stored
+                    branch: "main"                # Branch to update
+                    commitMessage: "Update release with new asset"
                     variables:
                       - name: asset_id
                         type: String
