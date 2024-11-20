@@ -111,7 +111,7 @@ pipeline:
                   identifier: updateReleaseRepo
                   timeout: 10m
                   spec:
-                  manifest: "<+pipeline.variables.releaseManifestFile>"  # Specify the manifest variable or path
+                  manifest: "deployment.yaml"  # Specify the manifest variable or path
                   repository:
                     connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
                     repoName: pipelineDEMO
