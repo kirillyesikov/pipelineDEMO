@@ -57,7 +57,7 @@ pipeline:
         type: Deployment
         spec:
           deploymentType: Kubernetes
-          gitOpsEnabled: true
+          gitOpsEnabled: false
           service:
             serviceRef: kirill_app
           execution:
@@ -168,9 +168,9 @@ pipeline:
         type: Deployment
         spec:
           deploymentType: Kubernetes
-          gitOpsEnabled: true
+          gitOpsEnabled: false
           service:
-            serviceRef: kirill-app
+            serviceRef: kirill_app
           execution:
             steps:
               - step:
