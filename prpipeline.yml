@@ -111,15 +111,15 @@ pipeline:
                   identifier: updateReleaseRepo
                   timeout: 10m
                   spec:
-                  infrastructureDefinitions:
-                  - identifier: kirill_k8sinfra
-                  manifest: "deployment.yaml"  # Specify the manifest variable or path
-                  repository:
-                    connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
-                    repoName: pipelineDEMO
-                    branch: "main"                # Branch to update
-                    commitMessage: "Update release with new asset"
-                  variables:
+                    infrastructureDefinitions:
+                    - identifier: kirill_k8sinfra
+                    manifest: "deployment.yaml"  # Specify the manifest variable or path
+                    repository:
+                      connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
+                      repoName: pipelineDEMO
+                      branch: "main"                # Branch to update
+                      commitMessage: "Update release with new asset"
+                    variables:
                       - name: asset_id
                         type: String
                         value: <+trigger.gitUser>-<+trigger.commitSha>
