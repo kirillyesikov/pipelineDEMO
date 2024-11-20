@@ -120,10 +120,6 @@ pipeline:
                       connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
                       repoName: pipelineDEMO
                       branch: main    # Branch to update
-                    variables:
-                      - name: releaseManifestFile
-                        type: String
-                        value: deployment.yaml
               - step:
                   type: MergePR
                   name: Merge PR
