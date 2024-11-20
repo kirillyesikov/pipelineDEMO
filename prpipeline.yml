@@ -67,6 +67,9 @@ pipeline:
               - identifier: kirill_k8sinfra  
           execution:
             steps:
+              - name: releaseManifestFile
+                type: String
+                value: deployment.yaml
               - step:
                   type: ShellScript
                   name: UpdateDeploymentArtifact
@@ -105,6 +108,7 @@ pipeline:
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
+                  variables:
               - step:
                   type: GitOpsUpdateReleaseRepo
                   name: Update Release Repo
