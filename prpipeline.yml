@@ -108,6 +108,8 @@ pipeline:
               - step:
                   type: GitOpsUpdateReleaseRepo
                   name: Update Release Repo
+                  infrastructureDefinitions:
+                  - identifier: kirill_k8sinfra
                   identifier: updateReleaseRepo
                   timeout: 10m
                   spec:
