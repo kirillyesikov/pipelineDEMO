@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: notes-app
-        image: kyesikov/notes-app
+        image: kyesikov/notes-app:null
         resources:
           requests:
             cpu: "100m"
