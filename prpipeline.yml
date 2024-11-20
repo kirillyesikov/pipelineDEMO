@@ -117,7 +117,7 @@ pipeline:
                     repoName: pipelineDEMO
                     branch: "main"                # Branch to update
                     commitMessage: "Update release with new asset"
-                    variables:
+                  variables:
                       - name: asset_id
                         type: String
                         value: <+trigger.gitUser>-<+trigger.commitSha>
