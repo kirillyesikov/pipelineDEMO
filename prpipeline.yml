@@ -85,7 +85,7 @@ pipeline:
                           GITHUBPAT=<+secrets.getValue("kirill_gitpat")>
                           git clone https://oauth2:$GITHUBPAT@github.com/kirillyesikov/pipelineDEMO.git
                           ls
-                          FILE_PATH="deployment.yaml"
+                          FILE_PATH="pipelineDEMO/deployment.yaml"
 
                           # Detect OS and set the sed in-place edit command accordingly
                           if [[ "$OSTYPE" == "darwin"* ]]; then
