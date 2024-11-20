@@ -60,6 +60,11 @@ pipeline:
           gitOpsEnabled: false
           service:
             serviceRef: kirill_app
+          environment:
+            environmentRef: kirilldevenv
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: kirillk8sinfra  
           execution:
             steps:
               - step:
