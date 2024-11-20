@@ -79,13 +79,14 @@ pipeline:
                       spec:
                         script: |-
                           export IMAGE_TAG="<+pipeline.variables.imageRepo>:<+pipeline.variables.imageTag>"
-                          rm -rf harness-gitops-workshop
+                          rm -rf pipelineDEMO
                           git config --global user.email ci-bot@argocd.com && git config --global user.name ci-bot
                           echo "cloning repo..."
                           GITHUBPAT=<+secrets.getValue("kirill_gitpat")>
                           git clone https://oauth2:$GITHUBPAT@github.com/kirillyesikov/pipelineDEMO.git
+                          cd pipelineDEMO
                           ls
-                          FILE_PATH="pipelineDEMO/deployment.yaml"
+                          FILE_PATH="deployment.yaml"
 
                           # Detect OS and set the sed in-place edit command accordingly
                           if [[ "$OSTYPE" == "darwin"* ]]; then
