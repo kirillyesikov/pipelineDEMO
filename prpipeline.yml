@@ -64,7 +64,7 @@ pipeline:
             environmentRef: kirilldevenv
             deployToAll: false
             infrastructureDefinitions:
-              - identifier: kirillk8sinfra  
+              - identifier: kirill_k8sinfra  
           execution:
             steps:
               - step:
@@ -175,7 +175,7 @@ pipeline:
             environmentRef: kirilldevenv
             deployToAll: false
             infrastructureDefinitions:
-              - identifier: kirillk8sinfra  
+              - identifier: kirill_k8sinfra  
           execution:
             steps:
               - step:
