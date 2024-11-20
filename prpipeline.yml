@@ -117,8 +117,7 @@ pipeline:
                     repository:
                       connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
                       repoName: pipelineDEMO
-                      branch: main               # Branch to update
-                      commitMessage: "Update release with new asset"
+                      branch: main    # Branch to update
                     variables:
                       - name: releaseManifestFile
                         type: String
