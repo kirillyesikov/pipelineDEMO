@@ -6,7 +6,7 @@ connector:
   projectIdentifier: ProxMOx
   type: DockerRegistry
   spec:
-    dockerRegistryUrl: https://index.docker.io/v2/
+    dockerRegistryUrl: https://index.docker.io/v1/
     providerType: DockerHub
     auth:
       type: UsernamePassword
