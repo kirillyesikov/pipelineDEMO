@@ -108,11 +108,11 @@ pipeline:
               - step:
                   type: GitOpsUpdateReleaseRepo
                   name: Update Release Repo
-                  infrastructureDefinitions:
-                  - identifier: kirill_k8sinfra
                   identifier: updateReleaseRepo
                   timeout: 10m
                   spec:
+                  infrastructureDefinitions:
+                  - identifier: kirill_k8sinfra
                   manifest: "deployment.yaml"  # Specify the manifest variable or path
                   repository:
                     connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
