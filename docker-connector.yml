@@ -12,5 +12,5 @@ connector:
       type: UsernamePassword
       spec:
         username: kyesikov
-        passwordRef: docker_secret
+        passwordRef: docker-secret
     executeOnDelegate: false
