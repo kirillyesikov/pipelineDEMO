@@ -61,7 +61,7 @@ pipeline:
           deploymentType: Kubernetes
           gitOpsEnabled: true
           service:
-            serviceRef: kirill-app
+            serviceRef: kirill_app
           execution:
             steps:
               - step:
@@ -127,7 +127,7 @@ pipeline:
             rollbackSteps: []
           environment:
             environmentRef: kirilldevenv
-            deployToAll: false
+            deployToAll: true
             infrastructureDefinitions:
               - identifier: kirillk8sinfra
         tags: {}
@@ -201,7 +201,7 @@ pipeline:
             rollbackSteps: []
           environment:
             environmentRef: kirillprodenv
-            deployToAll: false
+            deployToAll: true
             infrastructureDefinitions:
               - identifier: kirillk8sinfra
         tags: {}
