@@ -128,11 +128,6 @@ pipeline:
                   timeout: 10m
                   spec: {}
             rollbackSteps: []
-          environment:
-            environmentRef: kirilldevenv
-            deployToAll: true
-            infrastructureDefinitions:
-              - identifier: kirillk8sinfra
         tags: {}
         failureStrategies:
           - onFailure:
@@ -207,11 +202,6 @@ pipeline:
                   timeout: 10m
                   spec: {}
             rollbackSteps: []
-          environment:
-            environmentRef: kirillprodenv
-            deployToAll: true
-            infrastructureDefinitions:
-              - identifier: kirillk8sinfra
         tags: {}
         failureStrategies:
           - onFailure:
