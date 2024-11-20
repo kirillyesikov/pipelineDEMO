@@ -121,6 +121,20 @@ pipeline:
                       repoName: pipelineDEMO
                       branch: main    # Branch to update
               - step:
+                  type: ShellScript
+                  name: Log Variables
+                  identifier: logVariables
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: |-
+                          echo "Release Manifest: <+pipeline.variables.releaseManifestFile>"
+                          echo "Image Repo: <+pipeline.variables.imageRepo>"
+                          echo "Image Tag: <+pipeline.variables.imageTag>"
+              - step:
                   type: MergePR
                   name: Merge PR
                   identifier: mergePR
