@@ -34,7 +34,6 @@ pipeline:
                     config: default
                     target:
                       type: repository
-                      workspace: kyesikov/notes-app
                       name: PIPE
                       variant: main
                     advanced:
