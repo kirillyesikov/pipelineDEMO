@@ -165,7 +165,7 @@ pipeline:
                         - account._account_all_users
                     isAutoRejectEnabled: false
                     approverInputs: []
-        tags: {}
+        tags: {}     
     - stage:
         name: DeployProd
         identifier: DeployProd
