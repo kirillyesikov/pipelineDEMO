@@ -120,7 +120,7 @@ pipeline:
                     manifest: <+pipeline.variables.releaseManifestFile>  # Specify the manifest variable or path
                     repository: 
                       connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
-                      repoName: pipelineDEMO
+                      repoName: https://github.com/kirillyesikov/pipelineDEMO.git
                       branch: main    # Branch to update
                   infrastructure:  # Add the infrastructure block here
                     type: GitHub
