@@ -123,9 +123,9 @@ pipeline:
                   execution:
                     onDelegate: true  # Indicates execution context
                   infrastructure:
-                    type: KubernetesDirect  # Adjust as necessary for the infrastructure setup
+                    type: GitHub  # Adjust as necessary for the infrastructure setup
                     spec:
-                      connectorRef: kirill_k8sinfra
+                      connectorRef: kirill_gitconnector
                       namespace: default
               - step:
                   type: ShellScript
