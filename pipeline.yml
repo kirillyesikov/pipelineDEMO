@@ -34,6 +34,7 @@ pipeline:
                     config: default
                     target:
                       type: repository
+                      name: pipelineDEMO
                       variant: main
                     advanced:
                       log:
