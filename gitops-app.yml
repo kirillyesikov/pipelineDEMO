@@ -1,6 +1,6 @@
 gitops:
   name: gitops-application
-  projectIdentifier: default_project
+  projectIdentifier: ProxMOx
   orgIdentifier: default
   type: application
   application:
