@@ -120,13 +120,13 @@ pipeline:
                       connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
                       repoName: pipelineDEMO
                       branch: main    # Branch to update
-                      tags: {}
-                      failureStrategies:
-                        - onFailure:
-                            errors:
-                              - AllErrors
-                            action:
-                              type: StageRollback
+                  execution:
+                    onDelegate: true  # Indicates execution context
+                  infrastructure:
+                    type: KubernetesDirect  # Adjust as necessary for the infrastructure setup
+                    spec:
+                      connectorRef: kirill_k8sinfra
+                      namespace: default
               - step:
                   type: ShellScript
                   name: Log Variables
