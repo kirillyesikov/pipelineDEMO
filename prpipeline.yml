@@ -126,6 +126,11 @@ pipeline:
                     type: GitHub  # Adjust as necessary for the infrastructure setup
                     spec:
                       connectorRef: kirill_gitconnector
+                    instancesListPath: "/path/to/static/instance/list"  # Adjust as needed
+                    fetchInstancesScript: ""  # Empty if instances are static
+                    instanceAttributes:
+                      - key: "instanceName"
+                        value: "static-instance"
               - step:
                   type: ShellScript
                   name: Log Variables
