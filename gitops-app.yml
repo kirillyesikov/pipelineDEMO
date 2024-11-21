@@ -11,8 +11,9 @@ gitops:
         harness.io/envRef: ""
     spec:
       source:
-        repoURL: https://github.com/GITHUB_USERNAME/harness-gitops-workshop
-        path: configs/git-generator-files-discovery
+        repoURL: https://github.com/kirillyesikov/pipelineDEMO.git
+        path: deployment.yaml 
+        path: service.yaml
         targetRevision: main
       destination:
         server: https://kubernetes.default.svc
