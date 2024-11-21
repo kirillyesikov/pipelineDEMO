@@ -110,6 +110,17 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
               - step:
+                  type: GitHubUpdateReleaseRepo
+                  name: Update Release Repo
+                  identifier: updateReleaseRepo
+                  timeout: 10m
+                  spec:
+                    manifest: <+pipeline.variables.releaseManifestFile>  # Specify the manifest variable or path
+                    repository: 
+                      connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
+                      repoName: pipelineDEMO
+                      branch: main    # Branch to update
+              - step:
                   type: ShellScript
                   name: Log Variables
                   identifier: logVariables
@@ -122,18 +133,7 @@ pipeline:
                         script: |-
                           echo "Release Manifest: <+pipeline.variables.releaseManifestFile>"
                           echo "Image Repo: <+pipeline.variables.imageRepo>"
-                          echo "Image Tag: <+pipeline.variables.imageTag>"
-              - step:
-                  type: GitHubUpdateReleaseRepo
-                  name: Update Release Repo
-                  identifier: updateReleaseRepo
-                  timeout: 10m
-                  spec:
-                    manifest: <+pipeline.variables.releaseManifestFile>  # Specify the manifest variable or path
-                    repository: 
-                      connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
-                      repoName: pipelineDEMO
-                      branch: main    # Branch to update
+                          echo "Image Tag: <+pipeline.variables.imageTag>"        
               - step:
                   type: MergePR
                   name: Merge PR
