@@ -34,8 +34,6 @@ pipeline:
                     config: default
                     target:
                       type: repository
-                      workspace: apps/podinfo
-                      name: Harness GitOps Workshop
                       variant: main
                     advanced:
                       log:
@@ -50,8 +48,7 @@ pipeline:
                     repo: <+pipeline.variables.imageRepo>
                     tags:
                       - <+pipeline.variables.imageTag>
-                    dockerfile: apps/podinfo/Dockerfile
-                    context: apps/podinfo
+                    dockerfile: Dockerfile
     - stage:
         name: DeployDev
         identifier: DeployDev
@@ -61,7 +58,12 @@ pipeline:
           deploymentType: Kubernetes
           gitOpsEnabled: true
           service:
-            serviceRef: podinfoservice
+            serviceRef: kirill_app
+          environment:
+            environmentRef: kirilldevenv
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: kirill_k8sinfr
           execution:
             steps:
               - step:
@@ -76,14 +78,14 @@ pipeline:
                       spec:
                         script: |-
                           export IMAGE_TAG="<+pipeline.variables.imageRepo>:<+pipeline.variables.imageTag>"
-                          rm -rf harness-gitops-workshop
+                           rm -rf pipelineDEMO
                           git config --global user.email ci-bot@argocd.com && git config --global user.name ci-bot
                           echo "cloning repo..."
-                          GITHUBPAT=<+secrets.getValue("github_pat")>
-                          git clone https://oauth2:$GITHUBPAT@github.com/GITHUB_USERNAME/harness-gitops-workshop.git
-                          cd harness-gitops-workshop
+                          GITHUBPAT=<+secrets.getValue("kirill_gitpat")>
+                          git clone https://oauth2:$GITHUBPAT@github.com/kirillyesikov/pipelineDEMO.git
+                          cd pipelineDEMO
                           ls
-                          FILE_PATH="configs/git-generator-files-discovery/apps/podinfo/deployment.yaml"
+                          FILE_PATH="deployment.yaml"
 
                           # Detect OS and set the sed in-place edit command accordingly
                           if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -102,6 +104,7 @@ pipeline:
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
+              
               - step:
                   type: GitOpsUpdateReleaseRepo
                   name: Update Release Repo
@@ -127,10 +130,10 @@ pipeline:
                   spec: {}
             rollbackSteps: []
           environment:
-            environmentRef: dev
+            environmentRef: kirilldevenv
             deployToAll: false
             gitOpsClusters:
-              - identifier: gitopscluster
+              - identifier: kirillcluster
         tags: {}
         failureStrategies:
           - onFailure:
@@ -204,7 +207,7 @@ pipeline:
             environmentRef: prod
             deployToAll: false
             gitOpsClusters:
-              - identifier: gitopscluster
+              - identifier: kirillcluster
         tags: {}
         failureStrategies:
           - onFailure:
