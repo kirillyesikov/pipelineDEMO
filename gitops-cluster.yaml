@@ -1,7 +1,7 @@
 gitops:
   name: gitops_cluster
   identifier: gitopscluster
-  projectIdentifier: default_project
+  projectIdentifier: ProxMOx
   orgIdentifier: default
   type: cluster
   cluster:
