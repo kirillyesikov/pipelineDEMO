@@ -124,7 +124,7 @@ pipeline:
                           echo "Image Repo: <+pipeline.variables.imageRepo>"
                           echo "Image Tag: <+pipeline.variables.imageTag>"
               - step:
-                  type: GitOpsUpdateReleaseRepo
+                  type: GitHubUpdateReleaseRepo
                   name: Update Release Repo
                   identifier: updateReleaseRepo
                   timeout: 10m
