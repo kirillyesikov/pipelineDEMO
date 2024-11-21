@@ -57,7 +57,7 @@ pipeline:
         type: Deployment
         spec:
           deploymentType: Kubernetes
-          gitOpsEnabled: true
+          gitOpsEnabled: false
           service:
             serviceRef: kirill_app
           environment:
