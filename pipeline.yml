@@ -215,7 +215,7 @@ pipeline:
       type: String
       description: ""
       required: false
-      value: DOCKER_USERNAME/harness-gitops-workshop
+      value: kyesikov/notes-app
     - name: imageTag
       type: String
       description: ""
