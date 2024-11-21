@@ -122,6 +122,8 @@ pipeline:
                       connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
                       repoName: pipelineDEMO
                       branch: main    # Branch to update
+                  infrastructure:  # Add the infrastructure block here
+                    type: GitHub
               - step:
                   type: ShellScript
                   name: Log Variables
