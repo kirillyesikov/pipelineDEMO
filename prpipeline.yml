@@ -115,13 +115,12 @@ pipeline:
                   identifier: updateReleaseRepo
                   timeout: 10m
                   spec:
+                    onRepo: true  # Indicates execution context
                     manifest: <+pipeline.variables.releaseManifestFile>  # Specify the manifest variable or path
                     repository: 
                       connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
                       repoName: pipelineDEMO
                       branch: main    # Branch to update
-                  execution:
-                    onRepo: true  # Indicates execution context
               - step:
                   type: ShellScript
                   name: Log Variables
