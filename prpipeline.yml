@@ -122,8 +122,8 @@ pipeline:
                       connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
                       repoName: https://github.com/kirillyesikov/pipelineDEMO.git
                       branch: main    # Branch to update
-                    infrastructure:
-                      connectorRef: kirill_gitconnector
+                   infrastructureDefinitions:
+                     - identifier: kirill_k8sinfra
               - step:
                   type: ShellScript
                   name: Log Variables
