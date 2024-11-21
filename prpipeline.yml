@@ -110,11 +110,15 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
               - step:
-                  type: GitHubUpdateReleaseRepo
+                  type: GitOpsUpdateReleaseRepo
                   name: Update Release Repo
                   identifier: updateReleaseRepo
                   timeout: 10m 
                   spec:
+                    variables:
+                      - name: asset_id
+                        type: String
+                        value: <+trigger.gitUser>-<+trigger.commitSha>
                     repository: 
                       connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
                       repoName: https://github.com/kirillyesikov/pipelineDEMO.git
