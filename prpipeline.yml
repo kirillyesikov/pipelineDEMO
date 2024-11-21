@@ -126,7 +126,6 @@ pipeline:
                     type: GitHub  # Adjust as necessary for the infrastructure setup
                     spec:
                       connectorRef: kirill_gitconnector
-                      namespace: default
               - step:
                   type: ShellScript
                   name: Log Variables
