@@ -110,20 +110,6 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
               - step:
-                  type: GitOpsUpdateReleaseRepo
-                  name: Update Release Repo
-                  identifier: updateReleaseRepo
-                  timeout: 10m 
-                  spec:
-                    variables:
-                      - name: asset_id
-                        type: String
-                        value: <+trigger.gitUser>-<+trigger.commitSha>
-                    repository: 
-                      connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
-                      repoName: https://github.com/kirillyesikov/pipelineDEMO.git
-                      branch: main    # Branch to update
-              - step:
                   type: ShellScript
                   name: Log Variables
                   identifier: logVariables
@@ -136,7 +122,21 @@ pipeline:
                         script: |-
                           echo "Release Manifest: <+pipeline.variables.releaseManifestFile>"
                           echo "Image Repo: <+pipeline.variables.imageRepo>"
-                          echo "Image Tag: <+pipeline.variables.imageTag>"        
+                          echo "Image Tag: <+pipeline.variables.imageTag>" 
+              - step:
+                  type: GitOpsUpdateReleaseRepo
+                  name: Update Release Repo
+                  identifier: updateReleaseRepo
+                  timeout: 10m 
+                  spec:
+                    variables:
+                      - name: asset_id
+                        type: String
+                        value: <+trigger.gitUser>-<+trigger.commitSha>
+                    repository: 
+                      connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
+                      repoName: https://github.com/kirillyesikov/pipelineDEMO.git
+                      branch: main    # Branch to update       
               - step:
                   type: MergePR
                   name: Merge PR
