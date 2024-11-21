@@ -69,7 +69,7 @@ pipeline:
             variables:
               - name: releaseManifestFile
                 type: String
-                value: pipelineDEMO/deployment.yaml
+                value: deployment.yaml
             steps:
               - step:
                   type: ShellScript
@@ -128,7 +128,7 @@ pipeline:
                   name: Update Release Repo
                   identifier: updateReleaseRepo
                   timeout: 10m 
-                  spec:
+                  spec:                  
                     variables:
                       - name: asset_id
                         type: String
@@ -137,6 +137,7 @@ pipeline:
                       connectorRef: kirill_gitconnector    # The Git repository connector for accessing the release repo
                       repoName: https://github.com/kirillyesikov/pipelineDEMO.git
                       branch: main    # Branch to update       
+                    manifest: <+pipeline.variables.releaseManifestFile> 
               - step:
                   type: MergePR
                   name: Merge PR
