@@ -129,7 +129,7 @@ pipeline:
             environmentRef: kirilldevenv
             deployToAll: false
             gitOpsClusters:
-              - identifier: kirillcluster
+              - identifier: kirill_cluster
         tags: {}
         failureStrategies:
           - onFailure:
