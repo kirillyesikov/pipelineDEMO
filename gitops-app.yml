@@ -5,7 +5,7 @@ gitops:
   type: application
   application:
     metadata:
-      clusterName: gitops_cluster
+      clusterName: kirill_cluster
       labels:
         harness.io/serviceRef: ""
         harness.io/envRef: ""
