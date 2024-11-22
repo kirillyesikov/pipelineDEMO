@@ -1,5 +1,5 @@
 gitops:
-  name: gitops_cluster
+  name: kirill_cluster
   identifier: gitopscluster
   projectIdentifier: ProxMOx
   orgIdentifier: default
