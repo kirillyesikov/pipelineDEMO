@@ -1,6 +1,6 @@
 gitops:
-    name: gitops_repo
-    identifier: gitopsrepo
+    name: kirill_repo
+    identifier: kirillrepo
     projectIdentifier: ProxMOx
     orgIdentifier: default
     type: repository
