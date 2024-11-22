@@ -8,4 +8,4 @@ gitops:
     server: https://192.168.0.53:443
     config:
       clusterConnectionType: IN_CLUSTER
-  agentIdentifier: AGENT_NAME
+  agentIdentifier: gitops-agent
