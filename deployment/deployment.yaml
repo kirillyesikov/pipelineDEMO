@@ -1,14 +1,10 @@
-metadata:
-  name: notes-app
-  labels:
-    app: notes-app
 apiVersion: apps/v1
 kind: Deployment
 spec:
   template:
     metadata:
       labels:
-        app: "notes-app"
+        app: notes-app
     spec:
       containers:
       - image: kyesikov/notes-app:null
