@@ -19,7 +19,7 @@ spec:
         name: "notes-app"
         resources:
           requests:
-            cpu: "150m"
+            cpu: "100m"
         ports:
         - containerPort: 3000
   replicas: 2
