@@ -15,10 +15,10 @@ service:
                             connectorRef: kirillgitconnector
                             gitFetchType: Branch
                             paths:
-                                - deployment.yaml
-                                - service.yaml
+                                - deployment/deployment.yaml 
+                                - deployment/service.yaml
                             repoName: pipelineDEMO
                             branch: main
                         skipResourceVersioning: false
                         enableDeclarativeRollback: false
-    gitOpsEnabled: false
+    gitOpsEnabled: true
