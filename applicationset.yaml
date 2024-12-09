@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1  
+kind: ApplicationSet  
+metadata:  
+  name: podinfo  
+spec:  
+  generators:  
+    - git:  
+        repoURL: https://github.com/kirillyesikov/pipelineDEMO.git  
+        revision: HEAD  
+        files:  
+        - path: "configs/git-generator-files-discovery/cluster-config/**/config.json"  
+  template:  
+    metadata:  
+      name: '{{cluster.namespace}}-podinfo'  
+    spec:  
+      project: ARGO_PROJECT_ID  
+      source:  
+        repoURL: https://github.com/kirillyesikov/pipelineDEMO.git  
+        targetRevision: HEAD  
+        path: "configs/git-generator-files-discovery/apps/podinfo"  
+      destination:  
+        server: '{{cluster.address}}'  
+        namespace: '{{cluster.namespace}}'  
+      syncPolicy:  
+        syncOptions:
+        - CreateNamespace=true
