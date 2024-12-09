@@ -1,24 +1,36 @@
 service:
-    name: kirill_app
-    identifier: kirillapp
-    serviceDefinition:
-        type: Kubernetes
-        spec:
-            manifests:
-                - manifest:
-                    identifier: app
-                    type: K8sManifest
-                    spec:
-                      store:
-                        type: Github
-                        spec:
-                            connectorRef: kirillgitconnector
-                            gitFetchType: Branch
-                            paths:
-                                - deployment/deployment.yaml 
-                                - deployment/service.yaml
-                            repoName: pipelineDEMO
-                            branch: main
-                        skipResourceVersioning: false
-                        enableDeclarativeRollback: false
-    gitOpsEnabled: true
+  name: kirill_app
+  identifier: kirill_app
+  orgIdentifier: default
+  projectIdentifier: ProxMOx
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: gitopsrepo
+            type: ReleaseRepo
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: kirill_gitconnector
+                  gitFetchType: Branch
+                  paths:
+                    - deployment/deployment.yaml
+                    - deployment/service.yaml
+                  branch: main
+        - manifest:
+            identifier: gitops
+            type: DeploymentRepo
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: kirillgitconnector
+                  gitFetchType: Branch
+                  paths:
+                    - deployment/deployment.yaml
+                    - deployment/service.yaml
+                  branch: main
+    type: Kubernetes
+  gitOpsEnabled: true
