@@ -29,8 +29,7 @@ service:
                   connectorRef: kirillgitconnector
                   gitFetchType: Branch
                   paths:
-                    - deployment/deployment.yaml
-                    - deployment/service.yaml
+                    - applicationset.yaml
                   branch: main
     type: Kubernetes
   gitOpsEnabled: true
