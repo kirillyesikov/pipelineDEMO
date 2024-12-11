@@ -16,8 +16,7 @@ service:
                   connectorRef: kirill_gitconnector
                   gitFetchType: Branch
                   paths:
-                    - deployment/deployment.yaml
-                    - deployment/service.yaml
+                    - deployment/<+env.name>/config.json
                   branch: main
         - manifest:
             identifier: gitops
