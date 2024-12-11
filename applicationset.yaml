@@ -8,7 +8,7 @@ spec:
         repoURL: https://github.com/kirillyesikov/pipelineDEMO.git  
         revision: HEAD  
         files:  
-        - path: "deployment"  
+        - path: "configs/git-generator-files-discovery/cluster-config/**/config.json"  
   template:  
     metadata:  
       name: '{{cluster.namespace}}-notes-app'  
