@@ -1,23 +1,24 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: "apps/v1"
+kind: "Deployment"
+asset_id: "null-null"
 spec:
   template:
     metadata:
       labels:
-        app: notes-app
+        app: "notes-app"
     spec:
       containers:
-      - name:  notes-app
-        image: kyesikov/notes-app:null
-        imagePullPolicy: IfNotPresent
+      - image: "kyesikov/notes-app:null"
+        imagePullPolicy: "IfNotPresent"
         imagePullSecrets:
-        - name: kirill
+        - name: "kirill"
+        name: "notes-app"
         resources:
           requests:
-            cpu: 100m
+            cpu: "100m"
         ports:
         - containerPort: 3000
   replicas: 2
   selector:
     matchLabels:
-      app: notes-app
+      app: "notes-app"
