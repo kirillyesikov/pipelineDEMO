@@ -1,0 +1,8 @@
+{
+  "cluster" : {
+    "address" : "https://10.0.0.12:6443",
+    "name" : "gitopscluster",
+    "namespace" : "dev"
+  },
+
+}
