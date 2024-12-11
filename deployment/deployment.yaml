@@ -8,7 +8,7 @@ spec:
         app: "notes-app"
     spec:
       containers:
-      - image: "kyesikov/notes-app:null"
+      - image: kyesikov/notes-app:null
         imagePullPolicy: "IfNotPresent"
         imagePullSecrets:
         - name: "kirill"
