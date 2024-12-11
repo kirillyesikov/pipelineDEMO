@@ -1,7 +1,7 @@
+metadata:
+  name: "notes-app"
 apiVersion: "apps/v1"
 kind: "Deployment"
-metadata:
-  name: notes-app
 asset_id: "null-null"
 spec:
   template:
@@ -10,7 +10,7 @@ spec:
         app: "notes-app"
     spec:
       containers:
-      - image: kyesikov/notes-app:null
+      - image: "kyesikov/notes-app:null"
         imagePullPolicy: "IfNotPresent"
         imagePullSecrets:
         - name: "kirill"
