@@ -81,7 +81,7 @@ pipeline:
                           git clone https://oauth2:$GITHUBPAT@github.com/kirillyesikov/pipelineDEMO.git
                           cd pipelineDEMO
                           ls
-                          FILE_PATH="deployment.yaml"
+                          FILE_PATH="deployment/deployment.yaml"
 
                           # Detect OS and set the sed in-place edit command accordingly
                           if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -129,7 +129,7 @@ pipeline:
             environmentRef: kirilldevenv
             deployToAll: false
             gitOpsClusters:
-              - identifier: kirill_cluster
+              - identifier: gitopscluster
         tags: {}
         failureStrategies:
           - onFailure:
@@ -203,7 +203,7 @@ pipeline:
             environmentRef: kirillprodenv
             deployToAll: false
             gitOpsClusters:
-              - identifier: kirillcluster
+              - identifier: gitopscluster
         tags: {}
         failureStrategies:
           - onFailure:
