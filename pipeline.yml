@@ -74,7 +74,7 @@ pipeline:
                       spec:
                         script: |-
                           export IMAGE_TAG="<+pipeline.variables.imageRepo>:<+pipeline.variables.imageTag>"
-                           rm -rf pipelineDEMO
+                          rm -rf pipelineDEMO
                           git config --global user.email ci-bot@argocd.com && git config --global user.name ci-bot
                           echo "cloning repo..."
                           GITHUBPAT=<+secrets.getValue("kirill_gitpat")>
