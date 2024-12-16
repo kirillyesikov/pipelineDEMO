@@ -3,7 +3,7 @@
 ![Pipeline Screenshot](https://raw.githubusercontent.com/kirillyesikov/pipelineDEMO/main/Pipeline.PNG)
 
 # 1. Prerequisites
-### VM Setup ( multiple tools are avaliable online to provision a VM , ProxMox was used in this particular DEMO)
+### VM Setup ( multiple tools are avaliable online to provision a VM , ProxMox was used in this particular demo)
 ### Ensure your instance is running a VM with Ubuntu 23.10 live server.
 ### Allocate sufficient CPU, RAM (16GB is fine), and storage.
 
