@@ -1,6 +1,6 @@
 # To set up a CI/CD pipeline using Harness for your homelab/cloud environment with a Kubernetes cluster running on Proxmox-hosted Ubuntu VMs, here’s a structured breakdown of the process and tools:
 
-## 1. Prerequisites
+# 1. Prerequisites
 ### Proxmox VM Setup
 ### Ensure your Proxmox instance is running a VM with Ubuntu 23.10 live server.
 ### Allocate sufficient CPU, RAM (16GB is fine), and storage.
@@ -22,7 +22,7 @@ echo \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
-## 2. Kubernetes Setup with kubeadm
+# 2. Kubernetes Setup with kubeadm
 ### Follow the kubeadm "hard way" steps:
 
 ### Container Runtime: containerd
@@ -94,7 +94,7 @@ git clone https://github.com/kirillyesikov/pipelineDEMO.git
 cd pipelineDEMO
 ```
 
-## 3. CI/CD with Harness
+# 3. CI/CD with Harness
 ### Harness CLI Installation
 ### Download and configure the Harness CLI:
 ```
@@ -156,7 +156,7 @@ harness infrastructure --file infrastructure-definition.yml apply
 ```
 harness pipeline --file pipeline.yml apply
 ```
-## 4. Validate the Deployment
+# 4. Validate the Deployment
 ### Ensure the pipeline runs and deployments occur smoothly:
 
 ### Check Kubernetes pods:
@@ -164,8 +164,8 @@ harness pipeline --file pipeline.yml apply
 kubectl get pods -A
 ```
 ### Verify Harness pipeline runs through the UI or CLI.
-## 5. Continuous Monitoring
+# 5. Continuous Monitoring
 ### Set up logging and metrics within Kubernetes using tools like Prometheus or Grafana.
 ### Integrate Harness with monitoring tools for automated rollback capabilities.
-## Summary
-#### This end-to-end solution creates a robust CI/CD pipeline using Harness to manage deployments into a Kubernetes cluster running on Proxmox-based VMs. By using kubeadm, Docker, and containerd with a systemd cgroup driver, you ensure Kubernetes operates efficiently, while Harness orchestrates the CI/CD lifecycle seamlessly.
+# Summary
+## This end-to-end solution creates a robust CI/CD pipeline using Harness to manage deployments into a Kubernetes cluster running on Proxmox-based VMs. By using kubeadm, Docker, and containerd with a systemd cgroup driver, you ensure Kubernetes operates efficiently, while Harness orchestrates the CI/CD lifecycle seamlessly.
