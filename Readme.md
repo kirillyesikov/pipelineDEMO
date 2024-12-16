@@ -27,7 +27,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 # 2. Kubernetes Setup with kubeadm
-### Follow the kubeadm "hard way" steps:
+### Here are the instructions to setup a Kubernetes cluster from "scratch":
 
 ### Container Runtime: containerd
 ### Install containerd and runc:
@@ -63,8 +63,11 @@ containerd config default > /etc/containerd/config.toml
 
 sudo systemctl restart containerd
 ```
-
-### Enable required modules and install kubeadm:
+### Update the apt package index and install packages needed to use the Kubernetes apt repository
+### The apt-transport-https, ca-certificates, curl, and gpg tools ensure the system can handle HTTPS-based repositories and key management
+### Download the public signing key for the Kubernetes package repositories.
+### Add Kubernetes repository and sign the repository
+### Update required modules and install kubeadm:
 ```
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
