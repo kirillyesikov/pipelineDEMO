@@ -1,4 +1,5 @@
-# CI/CD pipeline using Harness for your homelab/cloud with a Kubernetes cluster running on Ubuntu VMs, here’s a structured breakdown of the process and tools:
+# CI/CD pipeline using Harness for your homelab/cloud with a Kubernetes cluster running on Ubuntu VMs
+# Here’s a structured breakdown of the process and tools:
 
 ![Pipeline Screenshot](https://raw.githubusercontent.com/kirillyesikov/pipelineDEMO/main/Pipeline.PNG)
 
