@@ -31,7 +31,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 ### Container Runtime: containerd
 ### Install containerd and runc:
+### Disable swap
 ```
+sudo swapoff -a
 cd /usr/local/
 wget https://github.com/containerd/containerd/releases/download/v2.0.0/containerd-2.0.0-linux-amd64.tar.gz
 tar Cxzvf /usr/local containerd-2.0.0-linux-amd64.tar.gz
