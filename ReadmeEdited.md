@@ -165,6 +165,9 @@ harness pipeline --file pipeline.yml apply
 ```
 kubectl get pods -A
 ```
+
+![Pods Screenshot](https://raw.githubusercontent.com/kirillyesikov/pipelineDEMO/main/pods.PNG)
+
 ### Verify Harness pipeline runs through the UI or CLI.
 # 5. Continuous Monitoring
 ### Set up logging and metrics within Kubernetes using tools like Prometheus or Grafana.
