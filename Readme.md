@@ -104,7 +104,7 @@ cd pipelineDEMO
 ```
 
 # 3. CI/CD with Harness
-### Harness CLI Installation
+## Harness CLI Installation
 ### Download and configure the Harness CLI:
 ```
 curl -LO https://github.com/harness/harness-cli/releases/download/v0.0.25-Preview/harness-v0.0.25-Preview-linux-amd64.tar.gz
@@ -116,7 +116,7 @@ echo 'export PATH="'$(pwd)':$PATH"' >> ~/.bash_profile
 ```
 harness login --api-key HARNESS-API-KEY --account-id HARNESS-ACCOUNT-ID
 ```
-### Harness Delegate Deployment
+## Harness Delegate Deployment
 ### Deploy the delegate inside your Kubernetes cluster using Helm:
 ```
 helm repo add harness-delegate https://app.harness.io/storage/harness-download/delegate-helm-chart/
@@ -131,7 +131,7 @@ helm upgrade -i helm-delegate --namespace harness-delegate-ng --create-namespace
   --set delegateDockerImage=harness/delegate:24.10.84200 \
   --set replicas=1 --set upgrader.enabled=true
 ```
-### Configure Harness Components
+## Configure Harness Components
 ### Create Secrets:
 ```
 harness secret apply --token <GITHUB_PAT> --secret-name "git_pat_secret"
@@ -166,7 +166,9 @@ harness infrastructure --file infrastructure-definition.yml apply
 harness pipeline --file pipeline.yml apply
 ```
 # 4. Validate the Deployment
+
 ### Ensure the pipeline runs and deployments occur smoothly:
+### Use Harness UI (https://www.harness.io/) to 
 
 ### Check Kubernetes pods:
 ```
