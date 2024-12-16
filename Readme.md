@@ -157,7 +157,7 @@ harness infrastructure --file infrastructure-definition.yml apply
 
 ```
 ## Gitops Portion (creating a GitOps agent, cluster and repo)
-### I would highly recommend to use the Harness UI for that
+### I would highly recommend to use the Harness UI for that https://www.harness.io/
 ### Since we are using a custom Kubernetes cluster we would have to account for Authentication and Authorization while setting up GitOps cluster , GitOps repo)
 ### ClusterRole, ClusterRolebinding, Service Account and Secret would have to be configured within your Kubernetes cluster
 ### GitHub Token has to be valid 
