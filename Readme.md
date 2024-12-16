@@ -136,6 +136,7 @@ harness secret apply --token <GITHUB_PAT> --secret-name "git_pat_secret"
 ## Connectors:
 ### GitHub Connector:
 ### Kubernetes Connector
+
 ```
 harness connector --file github-connector.yml apply --git-user <GITHUB_USER>
 harness connector --file kubernetes-connector.yml apply --delegate-name helm-delegate
