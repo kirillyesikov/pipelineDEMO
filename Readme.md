@@ -169,7 +169,7 @@ harness pipeline --file pipeline.yml apply
 # 4. Validate the Deployment
 
 ### Ensure the pipeline runs and deployments occur smoothly:
-### Use Harness UI (https://www.harness.io/) to 
+### Use Harness UI (https://www.harness.io/) to obtain logs and execution results
 
 ### Check Kubernetes pods:
 ```
