@@ -137,31 +137,24 @@ helm upgrade -i helm-delegate --namespace harness-delegate-ng --create-namespace
 harness secret apply --token <GITHUB_PAT> --secret-name "git_pat_secret"
 ```
 ## Connectors:
-
 ### GitHub Connector:
+### Kubernetes Connector
 ```
 harness connector --file github-connector.yml apply --git-user <GITHUB_USER>
-```
-### Kubernetes Connector:
-```
 harness connector --file kubernetes-connector.yml apply --delegate-name helm-delegate
 ```
 ## Define Services and Environments:
 
 ### Service:
+### Environment
+### Infrastructure Definition
 ```
 harness service --file service.yml apply
-```
-### Environment:
-```
 harness environment --file environment.yml apply
-```
-### Infrastructure Definition:
-```
 harness infrastructure --file infrastructure-definition.yml apply
-```
 
-### Create the Pipeline: Use a Canary Deployment strategy:
+```
+## Create the Pipeline:
 ```
 harness pipeline --file pipeline.yml apply
 ```
