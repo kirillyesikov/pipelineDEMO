@@ -27,7 +27,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 # 2. Kubernetes Setup with kubeadm
-### Here are the instructions to setup a Kubernetes cluster from "scratch":
+## Here are the instructions to setup a Kubernetes cluster from "scratch":
 
 ### Container Runtime: containerd
 ### Install containerd and runc:
@@ -81,23 +81,20 @@ sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
 ### Setup the certs using kubeadm
+### Initialize the Cluster
+### Install Calico CNI
 ```
 kubeadm certs certificate-key
 kubeadm certs renew all
-```
-
-### Initialize the Cluster
-```
 kubeadm init --apiserver-advertise-address=<VM_PRIVATE_IP>
 export KUBECONFIG=/etc/kubernetes/admin.conf
-```
-### Install Calico CNI
-```
 curl https://raw.githubusercontent.com/projectcalico/calico/v3.29.0/manifests/calico.yaml -O
 kubectl apply -f calico.yaml
 ```
 
-### Clone the repo
+## Clone the repo if you want to use Harness CLI
+## You can also use Harness UI (https://www.harness.io/)
+
 ```
 git clone https://github.com/kirillyesikov/pipelineDEMO.git
 cd pipelineDEMO
