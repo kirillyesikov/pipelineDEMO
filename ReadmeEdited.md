@@ -1,6 +1,6 @@
 # To set up a CI/CD pipeline using Harness for your homelab/cloud environment with a Kubernetes cluster running on Proxmox-hosted Ubuntu VMs, here’s a structured breakdown of the process and tools:
 
-![](https://github.com/kirillyesikov/pipelineDEMO/blob/main/images/Pipeline.PNG)
+![Pipeline Screenshot](https://raw.githubusercontent.com/kirillyesikov/pipelineDEMO/main/images/Pipeline.PNG)
 
 # 1. Prerequisites
 ### Proxmox VM Setup
