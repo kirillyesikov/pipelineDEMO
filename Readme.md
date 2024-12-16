@@ -138,8 +138,10 @@ harness secret apply --token <GITHUB_PAT> --secret-name "git_pat_secret"
 ## Connectors:
 ### GitHub Connector:
 ### Kubernetes Connector
+### Docker Connector
 
 ```
+harness connector --file docker-connector.yml apply
 harness connector --file github-connector.yml apply --git-user <GITHUB_USER>
 harness connector --file kubernetes-connector.yml apply --delegate-name helm-delegate
 ```
@@ -154,6 +156,11 @@ harness environment --file environment.yml apply
 harness infrastructure --file infrastructure-definition.yml apply
 
 ```
+## Gitops Portion (creating a GitOps agent, cluster and repo)
+### I would highly recommend to use the Harness UI for that
+### Since we are using a custom Kubernetes cluster we would have to account for Authentication and Authorization while setting up GitOps cluster , GitOps repo)
+### ClusterRole, ClusterRolebinding, Service Account and Secret would have to be configured
+
 ## Create the Pipeline:
 ```
 harness pipeline --file pipeline.yml apply
