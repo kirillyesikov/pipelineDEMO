@@ -168,4 +168,4 @@ kubectl get pods -A
 ### Set up logging and metrics within Kubernetes using tools like Prometheus or Grafana.
 ### Integrate Harness with monitoring tools for automated rollback capabilities.
 # Summary
-## This end-to-end solution creates a robust CI/CD pipeline using Harness to manage deployments into a Kubernetes cluster running on Proxmox-based VMs. By using kubeadm, Docker, and containerd with a systemd cgroup driver, you ensure Kubernetes operates efficiently, while Harness orchestrates the CI/CD lifecycle seamlessly.
+### This end-to-end solution creates a robust CI/CD pipeline using Harness to manage deployments into a Kubernetes cluster running on Proxmox-based VMs. By using kubeadm, Docker, and containerd with a systemd cgroup driver, you ensure Kubernetes operates efficiently, while Harness orchestrates the CI/CD lifecycle seamlessly.
