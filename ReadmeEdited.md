@@ -1,14 +1,12 @@
-To set up a CI/CD pipeline using Harness for your homelab/cloud environment with a Kubernetes cluster running on Proxmox-hosted Ubuntu VMs, here’s a structured breakdown of the process based on your configuration and tools:
+#To set up a CI/CD pipeline using Harness for your homelab/cloud environment with a Kubernetes cluster running on Proxmox-hosted Ubuntu VMs, here’s a structured breakdown of the process and tools:
 
-1. Prerequisites
+##1. Prerequisites
 Proxmox VM Setup
 Ensure your Proxmox instance is running a VM with Ubuntu 23.10 live server.
 Allocate sufficient CPU, RAM (16GB is fine), and storage.
 Install Docker
 Run the following commands to install Docker cleanly:
-
-bash
-Copy code
+```
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -23,13 +21,13 @@ echo \
 
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-2. Kubernetes Setup with kubeadm
+```
+##2. Kubernetes Setup with kubeadm
 Follow the kubeadm "hard way" steps:
 
 Container Runtime: containerd
 Install containerd and runc:
-bash
-Copy code
+```
 cd /usr/local/
 wget https://github.com/containerd/containerd/releases/download/v2.0.0/containerd-2.0.0-linux-amd64.tar.gz
 tar Cxzvf /usr/local containerd-2.0.0-linux-amd64.tar.gz
@@ -47,7 +45,15 @@ bash
 Copy code
 mkdir /etc/containerd
 containerd config default > /etc/containerd/config.toml
-# Update "SystemdCgroup = true"
+### Configure the systemd cgroup drive inside the config.toml
+### To use the systemd cgroup driver in /etc/containerd/config.toml with runc OCI runtime, set
+```
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
+  ...
+  
+  [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
+    SystemdCgroup = true
+
 sudo systemctl restart containerd
 Enable required modules and install kubeadm:
 bash
@@ -61,6 +67,8 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
+```
+
 Initialize the Cluster
 bash
 Copy code
