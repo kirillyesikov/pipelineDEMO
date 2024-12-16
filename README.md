@@ -94,6 +94,11 @@ EOF
 sudo sysctl --system
 sysctl net.ipv4.ip_forward
 ```
+### Setup the certs using kubeadm
+```
+kubeadm certs certificate-key
+kubeadm certs renew all
+```
 ### To initialize the control-plane node run ( you can use kubeadm-config.yaml and explicitly define your cluster cofiguration more https://kubernetes.io/docs/reference/config-api/kubeadm-config.v1beta3/ OR you can run flags with kubeadm init )
 ```
 kubeadm init --apiserver-advertise-address=<your VM private address IP of eth0)
