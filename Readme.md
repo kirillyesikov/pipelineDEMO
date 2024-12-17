@@ -47,6 +47,11 @@ systemctl enable --now containerd
 cd /usr/local/sbin/
 wget https://github.com/opencontainers/runc/releases/download/v1.2.1/runc.amd64
 install -m 755 runc.amd64 /usr/local/sbin/runc
+
+mkdir -p /opt/cni/bin
+cd /opt/cni/bin/
+wget https://github.com/containernetworking/plugins/releases/download/v1.6.0/cni-plugins-linux-amd64-v1.6.0.tgz
+tar zxvf cni-plugins-linux-amd64-v1.6.0.tgz
 ```
 ## Update containerd configuration:
 ```
