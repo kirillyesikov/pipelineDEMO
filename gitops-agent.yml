@@ -4,13 +4,13 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: argocd-application-controller
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: application-controller
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
   name: argocd-application-controller
   namespace: "argocd"
 spec:
@@ -33,13 +33,13 @@ metadata:
   name: argocd-applicationset-controller
   namespace: "argocd"
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: argocd-applicationset-controller
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: applicationset-controller
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
 spec:
   ingress:
   - ports:
@@ -60,13 +60,13 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: argocd-repo-server
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: repo-server
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
   name: argocd-repo-server
   namespace: "argocd"
 spec:
@@ -103,13 +103,13 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: argocd-redis
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: redis
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
   name: argocd-redis
   namespace: "argocd"
 spec:
@@ -216,13 +216,13 @@ metadata:
   name: gitops-agent
   namespace: "argocd"
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: harness-gitops-agent
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: gitops-agent
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
 ---
 # Source: gitops-helm/templates/upgrader/serviceaccount.yaml
 apiVersion: v1
@@ -231,13 +231,13 @@ metadata:
   name: gitops-agent-upgrader
   namespace: "argocd"
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: harness-gitops-agent-upgrader
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: gitops-agent-upgrader
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
 ---
 # Source: gitops-helm/charts/argo-cd/templates/argocd-configs/argocd-secret.yaml
 apiVersion: v1
@@ -260,32 +260,32 @@ apiVersion: v1
 kind: Secret
 metadata:
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: harness-agent-secret
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: gitops-agent
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
   name: gitops-agent
   namespace: argocd
 type: Opaque
 stringData:
   GITOPS_AGENT_TOKEN: |
-    LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFdmdJQkFEQU5CZ2txaGtpRzl3MEJBUUVGQUFTQ0JLZ3dnZ1NrQWdFQUFvSUJBUURaSkxtc3cxRGI4VHdrCm9HNzBlckc5OVk3dmpzMTRnT0ZJdXNvUTNyeFIyakhuZWpPMndsRG84dzJSVE91V2diTllGUU0ycnM0RGtEdjEKUUZ4dXNaVUpCY2hUNGVOdldNbUdwblBQczJmd21xanNlU0VHMlZmQUVsck9QTGxiOGMrTVdmdG5SMVNZZHJ3TApTaGgxRktreXdPSnZvam5MZ1N6ZjF6UVpzcmZiZFY2YUtLeGdpaXZnbWg0MG1Ob2ZRS3oyWHQxZkNYaTA0Mjg4CnhtTnRZZFc0R1JBRFB5MnBZcUlDWlV0cW5MTjM5QWRoZmdLZFZVditPR3pSSjdkR1g1RVZKVW95ZG5IMFVFc0kKUU5LZWozK1J5UVdXbzVXNXp2Wi9lVFlSbUVrRFlkUWFnVE94MlhyanFrTW9ySHlibXE0eEJ4dW5paEt0YlFiago2OTZaOVBVVkFnTUJBQUVDZ2dFQUREZ3MyclFERU4xNmJQVTZTVGUrV05wQXVPcG9WYWVyQmRTOUdrWHVnd3lzClVrSm1OcHFvd3ZNcWlFcXoxenhsUTBlcmJxQlhwNHV1VkJiVEhNZVJnM2gzMVlDWXMrTmpNOWlhRzg0VXcwMXcKeEIzczVkM0ZPbUhPQ2wwUWNVUWlVZHVlY2lscGNVcjlPZ1ZwYXUxR3VEeHlnYVczYXVSU0NpYXFIK2dXd0pxMwpxSE5BaGdDSVpaRERGWjQ5QnI1Z1lTcXp5WSttQ2ZKeWxqUzR4U25rdUIxaUMrZ2cweUJRaWw1N096Q1VCWG5GCitTQzNuRVBjaW91Vk1vTDlpaTN5UllEVlVMVy96aEJpcXVEQlNIQnBUSkVPV3gxUkxFbEplN1hERG1ZZmdTR1gKZ2MyTTlQMHNvcThzUzZzNlpQL2xRL252ZzVzUWp3QUtmUlZVNkswbkFRS0JnUUQ3cjl5Vm4vN0I3SXM3dnk5WQo3b1dGQWlRWERucERuYzM0TkdJb2pZZkNRcE1kNmpsYjU2V1RmcEVEcjFOdTVxZUhPRU4zUXhOOGQ5OXZDNjA0Ck9MdDVoRS9VYlZ5WDBQczNRSFRZVjBxOXVnS1ZPazMrY3Fxa3RDaTJyQnlrZzlBZ0hTV2dZQlhIZGZmYnlYNnEKZnJqM2kvM0VWK2hHaEluelY4a3ZyeWpheVFLQmdRRGMzVkt2WUdiZnorSGI2RVU1dzZjNXdYdG5EMWxlb01TaApNUG84YU5Sa1pVWHZPMDBnWXJOY29NWUNNNFpvUGllY1I5eWxHMFA1MXR3UU9xTUgyMnV5UWxHbnBCL3N3UWRJClR3NVRtZVNSTDFueklCcjhPOTFrNGlKOS96a21mbUhtMTh6eUdoWEdVYXF6UUt0MHpkNDViaDJsT2N1MlcrOHcKbjVWK3ZqcWg3UUtCZ1FDN3huNGRSNndyQkk3d2VYZ2Fzb0g5TlJhMStRQXcrRWdXR1FidTJJRGo1d1dadVFrbwpUMUJTRllpZHBpM3FQTDNhZlppZ0h2UW4xY3RtTHVFQ1pCbEMxUHMyTW8xMVd0NUNYNTJOVnJzVmgvU3JYeitYClNmZVVRREZyOEViQ1d2RnBORFhCVEU2VGJLa0tXbTlkUm9RN2REOVZRSHkwTitnd0hGdW1idGxkT1FLQmdRREYKV1NGcndVakt6VlowQjN2cm5HNU14aHg4dnhOTTRYd3d4N0dnenM2UkVvakZ0WWc1MnRlSGVjVFQ3TFE1YXVnNwoxVjVMVFN5VkRpNCtkaFo4aTh3VVVQdmpQbHlrVU9vdjZ5dlMrWnhwT2hVMmo4WnRBUlRXOHRSOUh0TXpHUlJqCmp3bjZmZUpjL1ZYNHExMUlsamJ0dS8zVFIreEZlcW9rR1VRY0p0Ly9GUUtCZ0N6ZGdtREtXUStXdmMwbERuNGgKbkhuZzJKY0xBZ3RqK2ZWKzFhYlVTbmZXZnEveHNrQWc4emIwa1FNWTQ4OVljMDhFNGVvbDkzSUpLeDRYaWhUUgpnaGExVkV1NmZ0Y0JmeUJOczBGcU5aeVM3Wmh0NWtsNjM0aDlib3pJVWp5QS84R3NtbXJ1bXdmQXhXRkRMcExhCklSS21CNVU3bmJIb1NWMUxJa1l0eWEwZQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo=
+    LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFdkFJQkFEQU5CZ2txaGtpRzl3MEJBUUVGQUFTQ0JLWXdnZ1NpQWdFQUFvSUJBUURBTGpMbnQ4eStFc2pyCjJMdElyK1FZQlNjcVZ6N1hQZUpGSEZQcUp5cXFPZU13MlhaM0tpdDMvY3NIeW8zQmR4MUJKcmVCdGZ1cVUzZmsKdkpFdnhENkdLd0ZKWXpPYXlmU0MzSi9EVGR3V3dFL21XQVBwL3gyTkMrdEVCTDZ4K0xDMkkvdElrZERXZXcvbwpMby9tQzRkU0ZkQjU1SlQ3RHJ1RzVxcFZBaTlRYTRjN1o5NHRocHBHSjhva0RhNXZJTHptbk9oeEV1eGlXb1MvCmo0ZDNiVlhKd0NGMVJaZW9CZTIzRE1sTHFUUjRYaVNoakh2SUFFVXlsTnZKTjJwdEFlRWZ0WmZ4TStSR0tuMW4Ka3lQL0R3aTBQZG5wYjFwSnFoRjJjT1oydW52UHpFUWFsUkhJN2I0aGNDV2VrQXlIMzVUQklPdWc3MnlDa0h4dwpxbkc2aXE0QkFnTUJBQUVDZ2dFQWUrb045cXpqZmpjOGlCM1IvSGMxT211d0tqUGhHQVlWN0h2c2U1RlBpRDBWCkNYMWVUazNKZzNBSVJuakxXRkJHYzZqVUwvVzRWTVhIQzV5dWZMOHJsWFVMT2xlVmdadndaYVI5K3Y4c0J4dHYKS1ZYZENEYnZ4ZTlHZmpBVkNVb1NIdzhxU2t1Qy9aaVIxQ0tadERvQXdlUEE3YWQrakRhZW9jZi9VaHE3aVR6OQpkeS95MmFzeEhNd0xDaEFMY2IrbTZBTitKcTFkdUwzbElLMkJwYWVFYVBZS2crQTBJTU0wMGlhTjgwM1BaVTVqCmd1STZKb1BKV3F5OVNiNU16ait0cWJqbDI0WWFYcmprbXYreEdZNWc1SEl2Nm5KakREcGhVUGZNa3Bub3pvVG4KMmxEMHFKVkd0QkFiMGRKMkpNUWorS0hYR2tPYWVzNlQwMzFpbEpQc2hRS0JnUURzSVgrMHY5V3VOemR5Wm9obQpRK2piaHUyY2tCU2xqSkIyQUNXNXdRY2ZrZkFHZmM4K3NNZGx6TUpWVFIvTDk1S0RKWVJyTWR3WVhhLzAwYWxTCnMvditQZUI2WC9JZjI2RmFjMjROenRybkFOMmtTdjhMUG5FSjlBWEtCSmIvVGc3V3hoS3RuanZjd0VmdHdOWFAKVk51aG9RRk15YXdEc2NSOWxoWnd4Q0IzcHdLQmdRRFFXZmFqLytrcFVaRE01SHg3ZlNMZytFc3NERmt6aWdqQwpxL3lwNkdKYndHUStLa1NPTDkrOXhTaDF5ZEh0SWtWcHh5cWUwTThaMzNEYnRVQTYwZ2pEc1RseWhreEVSbHhiCnoyeXM2ZnlRTzZkZzdNWnBGeG1wcytIMC9KQ1krTFpGSnFmK2xoSDVLdnJrU0RFcFBnY0hZcWZNTGZnM2pkMnAKMGlzS0hkNWlGd0tCZ0N1R1FUUGY2Rk1rZW1QcjRsaDNUQVNxNmtGaGpXeTJiQ3BUL0tBd3BFOTladkRMWDlmKwpYY0sxNjF3dHl4NmRrN1A0eGwrNzRRWGN2d0l4WXpTTFdIZVVrRHYrVTNMcjJPSURSTlhtdXhLNVppRlNjWkJ4CkFnVURwYzJHNnc1RUpSZ1Jpbi9XR3RLbDNweEVYeVRJVDNPTGFlSHRpbmRqM1FRSkZqblM3T2toQW9HQVNvUVMKYVA4cTFjTTlSWHBtWndnUFJHU3BCZno0bmkwOUN0cldCN0o4RXhLUkI0YTRkQjM5S0hMdUVJcDQwUlhUdTR3bQoyeHdWSmN5N0lXa0dxc0xaclp1aHp5cm05Zmd3S2duYWRWRk9LZ3VieGxlSWNxZDNYekZkbS9BRWl5RlFseFRICk9vOVRxRWpONkgxRlQ5bkdTOGJsK21scWYvdjJEam1EZVIvTG5Fc0NnWUJiUzdyTlFOVVdmVGM1T2ZhUFVzSDEKSVZib01XSDJxNmN5cEMwMmJ3ajRMOXhxTTYvajFnT1N3NWpXZmZ1eTRkd21vM3RaZ1lRaTY2bGFGS3BuZGswUAp0bnFSQUVmWlE5WHJVS0FZVFZFSnIwWVp5SURiYWNIcUowMEhRKzJKMHRENm9CK1lvZldWRXBKTEVGUGxaZ1dxCi85Rmk2R21xdlBXV2tJU0xtTm9IQ3c9PQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo=
 ---
 # Source: gitops-helm/templates/gitops-agent/secret.yaml
 apiVersion: v1
 kind: Secret
 metadata:
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: harness-agent-ssh
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: gitops-agent
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
   name: gitops-agent-mtls
   namespace: argocd
 type: Opaque
@@ -311,7 +311,7 @@ metadata:
 data:
   admin.enabled: "true"
   application.instanceLabelKey: argocd.argoproj.io/instance
-  cluster.inClusterEnabled: "false"
+  cluster.inClusterEnabled: "true"
   exec.enabled: "false"
   helm.valuesFileSchemes: secrets+gpg-import, secrets+gpg-import-kubernetes, secrets+age-import, secrets+age-import-kubernetes,
     secrets,secrets+literal, https
@@ -515,13 +515,13 @@ data:
 kind: ConfigMap
 metadata:
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: harness-gitops-agent-cm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: gitops-agent
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
   name: gitops-agent
   namespace: argocd
 ---
@@ -21056,6 +21056,188 @@ spec:
     served: true
     storage: true
 ---
+# Source: gitops-helm/templates/argocd-application-controller/clusterrole.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: argocd-application-controller-argocd
+  labels:
+    helm.sh/chart: gitops-helm-1.1.12
+    app.kubernetes.io/name: argocd-application-controller
+    app.kubernetes.io/instance: argocd
+    app.kubernetes.io/component: application-controller
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: harness-gitops
+    app.kubernetes.io/version: "v0.83.1"
+rules:
+  - apiGroups:
+    - '*'
+    resources:
+    - '*'
+    verbs:
+    - '*'
+  - nonResourceURLs:
+    - '*'
+    verbs:
+    - '*'
+---
+# Source: gitops-helm/templates/argocd-repo-server/clusterrole.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: argocd-repo-server-argocd
+  labels:
+    helm.sh/chart: gitops-helm-1.1.12
+    app.kubernetes.io/name: argocd-repo-server
+    app.kubernetes.io/instance: argocd
+    app.kubernetes.io/component: repo-server
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: harness-gitops
+    app.kubernetes.io/version: "v0.83.1"
+rules:
+  - apiGroups:
+    - '*'
+    resources:
+    - '*'
+    verbs:
+    - '*'
+  - nonResourceURLs:
+    - '*'
+    verbs:
+    - '*'
+---
+# Source: gitops-helm/templates/gitops-agent/clusterrole.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: gitops-agent-agent
+  labels:
+    helm.sh/chart: gitops-helm-1.1.12
+    app.kubernetes.io/name: harness-gitops-agent
+    app.kubernetes.io/instance: argocd
+    app.kubernetes.io/component: gitops-agent
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: harness-gitops
+    app.kubernetes.io/version: "v0.83.1"
+rules:
+  - apiGroups:
+      - '*'
+    resources:
+      - '*'
+    verbs:
+      - delete
+      - get
+      - patch
+      - watch
+      - list
+  - apiGroups:
+      - ""
+    resources:
+      - events
+    verbs:
+      - list
+  - apiGroups:
+      - ""
+    resources:
+      - pods
+      - pods/log
+    verbs:
+      - get
+  - apiGroups:
+      - argoproj.io
+    resources:
+      - applications
+      - applicationsets
+      - appprojects
+    verbs:
+      - get
+      - list
+      - update
+      - watch
+      - create
+      - patch
+      - delete
+  - apiGroups:
+      - batch
+    resources:
+      
+      - jobs
+    verbs:
+      - create
+  - apiGroups:
+      - argoproj.io
+    resources:
+      - workflows
+    verbs:
+      
+      - create
+---
+# Source: gitops-helm/templates/argocd-application-controller/clusterrolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: argocd-application-controller-argocd
+  labels:
+    helm.sh/chart: gitops-helm-1.1.12
+    app.kubernetes.io/name: argocd-application-controller
+    app.kubernetes.io/instance: argocd
+    app.kubernetes.io/component: application-controller
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: harness-gitops
+    app.kubernetes.io/version: "v0.83.1"
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: argocd-application-controller-argocd
+subjects:
+- kind: ServiceAccount
+  name: argocd-application-controller
+  namespace: argocd
+---
+# Source: gitops-helm/templates/argocd-repo-server/clusterrolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: argocd-repo-server-argocd
+  labels:
+    helm.sh/chart: gitops-helm-1.1.12
+    app.kubernetes.io/name: argocd-repo-server
+    app.kubernetes.io/instance: argocd
+    app.kubernetes.io/component: repo-server
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: harness-gitops
+    app.kubernetes.io/version: "v0.83.1"
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: argocd-repo-server-argocd
+subjects:
+- kind: ServiceAccount
+  name: argocd-repo-server
+  namespace: argocd
+---
+# Source: gitops-helm/templates/gitops-agent/clusterrolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: gitops-agent-agent
+  labels:
+    helm.sh/chart: gitops-helm-1.1.12
+    app.kubernetes.io/name: harness-gitops-agent
+    app.kubernetes.io/instance: argocd
+    app.kubernetes.io/component: gitops-agent
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: harness-gitops
+    app.kubernetes.io/version: "v0.83.1"
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: gitops-agent-agent
+subjects:
+- kind: ServiceAccount
+  name: gitops-agent
+  namespace: argocd
+---
 # Source: gitops-helm/charts/argo-cd/templates/argocd-application-controller/role.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -21277,13 +21459,13 @@ metadata:
   name: gitops-agent
   namespace: "argocd"
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: harness-gitops-agent
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: gitops-agent
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
 rules:
 - apiGroups:
   - ""
@@ -21362,13 +21544,13 @@ metadata:
   name: gitops-agent-upgrader
   namespace: "argocd"
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: harness-gitops-agent-upgrader
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: gitops-agent-upgrader
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
 rules:
   - apiGroups:
     - batch
@@ -21495,13 +21677,13 @@ metadata:
   name: gitops-agent
   namespace: "argocd"
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: harness-gitops-agent
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: gitops-agent
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -21518,13 +21700,13 @@ metadata:
   name: gitops-agent-upgrader
   namespace: "argocd"
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: harness-gitops-agent-upgrader
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: gitops-agent-upgrader
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
 roleRef:
   kind: Role
   name: gitops-agent-upgrader
@@ -21682,6 +21864,31 @@ spec:
     targetPort: redis
   selector:
     app.kubernetes.io/name: argocd-redis
+    app.kubernetes.io/instance: argocd
+---
+# Source: gitops-helm/templates/gitops-agent/metrics.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: gitops-agent-metrics
+  namespace: "argocd"
+  labels:
+    helm.sh/chart: gitops-helm-1.1.12
+    app.kubernetes.io/name: harness-gitops-agent-metrics
+    app.kubernetes.io/instance: argocd
+    app.kubernetes.io/component: gitops-agent
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: harness-gitops
+    app.kubernetes.io/version: "v0.83.1"
+spec:
+  type: ClusterIP
+  ports:
+  - name: http-metrics
+    protocol: TCP
+    port: 2112
+    targetPort: metrics
+  selector:
+    app.kubernetes.io/name: harness-gitops-agent
     app.kubernetes.io/instance: argocd
 ---
 # Source: gitops-helm/charts/argo-cd/templates/argocd-applicationset/deployment.yaml
@@ -21961,7 +22168,7 @@ spec:
     metadata:
       annotations:
         checksum/cmd-params: 5ca5173ee1646c7a7df6656b11cec4ca44f97a917f83ee8c71da84aba8ffc37a
-        checksum/cm: f74ca9cae8893785d3813c1efe04c8c29308392a6553569e0de49b4ed531054e
+        checksum/cm: 9b69bc40309540df2106dfa331ebe61c43c29f02b94cb9b55d0f62f87be1ec02
       labels:
         helm.sh/chart: argo-cd-6.7.18
         app.kubernetes.io/name: argocd-repo-server
@@ -22365,7 +22572,7 @@ spec:
     metadata:
       annotations:
         checksum/cmd-params: 5ca5173ee1646c7a7df6656b11cec4ca44f97a917f83ee8c71da84aba8ffc37a
-        checksum/cm: f74ca9cae8893785d3813c1efe04c8c29308392a6553569e0de49b4ed531054e
+        checksum/cm: 9b69bc40309540df2106dfa331ebe61c43c29f02b94cb9b55d0f62f87be1ec02
       labels:
         helm.sh/chart: argo-cd-6.7.18
         app.kubernetes.io/name: argocd-server
@@ -22823,13 +23030,13 @@ metadata:
   name: gitops-agent
   namespace: "argocd"
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: harness-gitops-agent
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: gitops-agent
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
 spec:
   replicas: 1
   revisionHistoryLimit: 
@@ -22840,14 +23047,15 @@ spec:
   template:
     metadata:
       annotations:
+        checksum/secrets: cd35629d6a416f76b84033b24ee9906fc5c89e09b3a3d244b82a23c746bbd7f9
       labels:
-        helm.sh/chart: gitops-helm-1.1.10
+        helm.sh/chart: gitops-helm-1.1.12
         app.kubernetes.io/name: harness-gitops-agent
         app.kubernetes.io/instance: argocd
         app.kubernetes.io/component: gitops-agent
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/part-of: harness-gitops
-        app.kubernetes.io/version: "v0.81.0"
+        app.kubernetes.io/version: "v0.83.1"
     spec:
       terminationGracePeriodSeconds: 30
       serviceAccountName: gitops-agent
@@ -22855,7 +23063,7 @@ spec:
       - command:
           - /app/agent
         name: gitops-agent
-        image: docker.io/harness/gitops-agent:v0.81.0
+        image: docker.io/harness/gitops-agent:v0.83.1
         imagePullPolicy: Always
         envFrom:
           - configMapRef:
@@ -22924,6 +23132,10 @@ spec:
           timeoutSeconds: 1
           successThreshold: 1
           failureThreshold: 3
+        ports:
+        - containerPort: 2112
+          name: metrics
+          protocol: TCP
         readinessProbe:
           httpGet:
             path: /healthz
@@ -23012,7 +23224,7 @@ spec:
     metadata:
       annotations:
         checksum/cmd-params: 5ca5173ee1646c7a7df6656b11cec4ca44f97a917f83ee8c71da84aba8ffc37a
-        checksum/cm: f74ca9cae8893785d3813c1efe04c8c29308392a6553569e0de49b4ed531054e
+        checksum/cm: 9b69bc40309540df2106dfa331ebe61c43c29f02b94cb9b55d0f62f87be1ec02
       labels:
         helm.sh/chart: argo-cd-6.7.18
         app.kubernetes.io/name: argocd-application-controller
@@ -23296,13 +23508,13 @@ metadata:
   name: gitops-agent-upgrader
   namespace: "argocd"
   labels:
-    helm.sh/chart: gitops-helm-1.1.10
+    helm.sh/chart: gitops-helm-1.1.12
     app.kubernetes.io/name: harness-gitops-agent-upgrader
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/component: gitops-agent-upgrader
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.81.0"
+    app.kubernetes.io/version: "v0.83.1"
 spec:
   schedule: "0 */4 * * *"
   concurrencyPolicy: Forbid
