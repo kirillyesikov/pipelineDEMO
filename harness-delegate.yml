@@ -59,7 +59,7 @@ spec:
       terminationGracePeriodSeconds: 3600
       restartPolicy: Always
       containers:
-      - image: harness/delegate:24.11.84306
+      - image: harness/delegate:24.12.84704
         imagePullPolicy: Always
         name: delegate
         securityContext:
@@ -119,8 +119,6 @@ spec:
           value: "true"
         - name: CLIENT_TOOLS_DOWNLOAD_DISABLED
           value: "true"
-        - name: LOG_STREAMING_SERVICE_URL
-          value: "https://app.harness.io/log-service/"
         - name: DELEGATE_RESOURCE_THRESHOLD
           value: ""
         - name: DYNAMIC_REQUEST_HANDLING
