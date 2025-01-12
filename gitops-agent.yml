@@ -272,7 +272,7 @@ metadata:
 type: Opaque
 stringData:
   GITOPS_AGENT_TOKEN: |
-    LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFdkFJQkFEQU5CZ2txaGtpRzl3MEJBUUVGQUFTQ0JLWXdnZ1NpQWdFQUFvSUJBUURBTGpMbnQ4eStFc2pyCjJMdElyK1FZQlNjcVZ6N1hQZUpGSEZQcUp5cXFPZU13MlhaM0tpdDMvY3NIeW8zQmR4MUJKcmVCdGZ1cVUzZmsKdkpFdnhENkdLd0ZKWXpPYXlmU0MzSi9EVGR3V3dFL21XQVBwL3gyTkMrdEVCTDZ4K0xDMkkvdElrZERXZXcvbwpMby9tQzRkU0ZkQjU1SlQ3RHJ1RzVxcFZBaTlRYTRjN1o5NHRocHBHSjhva0RhNXZJTHptbk9oeEV1eGlXb1MvCmo0ZDNiVlhKd0NGMVJaZW9CZTIzRE1sTHFUUjRYaVNoakh2SUFFVXlsTnZKTjJwdEFlRWZ0WmZ4TStSR0tuMW4Ka3lQL0R3aTBQZG5wYjFwSnFoRjJjT1oydW52UHpFUWFsUkhJN2I0aGNDV2VrQXlIMzVUQklPdWc3MnlDa0h4dwpxbkc2aXE0QkFnTUJBQUVDZ2dFQWUrb045cXpqZmpjOGlCM1IvSGMxT211d0tqUGhHQVlWN0h2c2U1RlBpRDBWCkNYMWVUazNKZzNBSVJuakxXRkJHYzZqVUwvVzRWTVhIQzV5dWZMOHJsWFVMT2xlVmdadndaYVI5K3Y4c0J4dHYKS1ZYZENEYnZ4ZTlHZmpBVkNVb1NIdzhxU2t1Qy9aaVIxQ0tadERvQXdlUEE3YWQrakRhZW9jZi9VaHE3aVR6OQpkeS95MmFzeEhNd0xDaEFMY2IrbTZBTitKcTFkdUwzbElLMkJwYWVFYVBZS2crQTBJTU0wMGlhTjgwM1BaVTVqCmd1STZKb1BKV3F5OVNiNU16ait0cWJqbDI0WWFYcmprbXYreEdZNWc1SEl2Nm5KakREcGhVUGZNa3Bub3pvVG4KMmxEMHFKVkd0QkFiMGRKMkpNUWorS0hYR2tPYWVzNlQwMzFpbEpQc2hRS0JnUURzSVgrMHY5V3VOemR5Wm9obQpRK2piaHUyY2tCU2xqSkIyQUNXNXdRY2ZrZkFHZmM4K3NNZGx6TUpWVFIvTDk1S0RKWVJyTWR3WVhhLzAwYWxTCnMvditQZUI2WC9JZjI2RmFjMjROenRybkFOMmtTdjhMUG5FSjlBWEtCSmIvVGc3V3hoS3RuanZjd0VmdHdOWFAKVk51aG9RRk15YXdEc2NSOWxoWnd4Q0IzcHdLQmdRRFFXZmFqLytrcFVaRE01SHg3ZlNMZytFc3NERmt6aWdqQwpxL3lwNkdKYndHUStLa1NPTDkrOXhTaDF5ZEh0SWtWcHh5cWUwTThaMzNEYnRVQTYwZ2pEc1RseWhreEVSbHhiCnoyeXM2ZnlRTzZkZzdNWnBGeG1wcytIMC9KQ1krTFpGSnFmK2xoSDVLdnJrU0RFcFBnY0hZcWZNTGZnM2pkMnAKMGlzS0hkNWlGd0tCZ0N1R1FUUGY2Rk1rZW1QcjRsaDNUQVNxNmtGaGpXeTJiQ3BUL0tBd3BFOTladkRMWDlmKwpYY0sxNjF3dHl4NmRrN1A0eGwrNzRRWGN2d0l4WXpTTFdIZVVrRHYrVTNMcjJPSURSTlhtdXhLNVppRlNjWkJ4CkFnVURwYzJHNnc1RUpSZ1Jpbi9XR3RLbDNweEVYeVRJVDNPTGFlSHRpbmRqM1FRSkZqblM3T2toQW9HQVNvUVMKYVA4cTFjTTlSWHBtWndnUFJHU3BCZno0bmkwOUN0cldCN0o4RXhLUkI0YTRkQjM5S0hMdUVJcDQwUlhUdTR3bQoyeHdWSmN5N0lXa0dxc0xaclp1aHp5cm05Zmd3S2duYWRWRk9LZ3VieGxlSWNxZDNYekZkbS9BRWl5RlFseFRICk9vOVRxRWpONkgxRlQ5bkdTOGJsK21scWYvdjJEam1EZVIvTG5Fc0NnWUJiUzdyTlFOVVdmVGM1T2ZhUFVzSDEKSVZib01XSDJxNmN5cEMwMmJ3ajRMOXhxTTYvajFnT1N3NWpXZmZ1eTRkd21vM3RaZ1lRaTY2bGFGS3BuZGswUAp0bnFSQUVmWlE5WHJVS0FZVFZFSnIwWVp5SURiYWNIcUowMEhRKzJKMHRENm9CK1lvZldWRXBKTEVGUGxaZ1dxCi85Rmk2R21xdlBXV2tJU0xtTm9IQ3c9PQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo=
+    LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFdmdJQkFEQU5CZ2txaGtpRzl3MEJBUUVGQUFTQ0JLZ3dnZ1NrQWdFQUFvSUJBUUR5MDNpaXRXZXFPM3dzCnBkZXJMRExKaWR6bjJCOERUOXNPdnUra0dUYXBsZHo1bFp3QWtibkdwSzBKcGJxWWdBenVZSmd2MWR1Ni9Kc2EKRS9kTS9yVFBOR0RNdkMrd3ozUWlLendQT05TUGJmdHprRVJBYzVXUVFkcDNwU2haWXVSZmJCQy85aE5ObUZ0TgpvVzR6bTROTnphVDBnaXUzVTVVQTRkbDZEVHc3bkkzQTFpVXpScTZUZ2tjYTVNTUE1M1RNdjJSV1g4dUNHc09uClUwRHJRSzRnSEVtUHc2a3pmeGtNbGkxMDdxaDVrblk5SCtlQWhFWlRrdHJDSVRSTk4wQ3BXZHFzak9YKzJxV1oKeDNaRlJuNkh1aGlFc2RnNkd4TzhsWGU0VXMxb293WmJoM3kraHlDQjlLMzBtd0ZWVFl3T29BSC92WWRLOUVBdgpzVi9oZWswbEFnTUJBQUVDZ2dFQVVOcTFhb2c0MG1nb09yMm1DR3NaSmg1dm5ndEttRkc0d1RvMmxVK0g4Z1BpCnBvQjRoMy8rZWZSUFljejdTdGdvZGg5WHpXWEtXb0xPS21ySGg2MndDdWFIN09Ra2hSMHVzRW54SDZodXJxdVMKZExKdTUzOFZLQW1sY3YxZGFCWVRzT3BNMFg1Z2d3L2VKd1UvcXBOM3J5cHdhTElIV0czT1NaTHFWVWVlN01IWQpJcXpVb3ZOdUM4TnZWUWNTZUhtU1BqYjY1REk4V2VWTTE0b2pQaEE1bWNIWE1IRWFsWkgvdDYyRzBpSG1mUlNZCk1BVXJrU0pUOFdDb01CTElNanZOSVAydzhSSGVtT1pTbHk4dDVZdmVoaTJWSTVqY20yNVpiUHpDVEF4bktoTkgKRzErNWI0ZVlvT2VVVElvZThKSEkrM01DUmQ3NG5IR1FXU3B4MkVkUndRS0JnUUR6VVdLMm1YUTFobmNHdWY1NwpaVmFLanFrT2dSZW5jYS9UdXJjeVJSZTJrL3g2OThzRXlNQjZST1gzRFRZWHNua1hwWkNwOXlYa0wwdmgvSVhDCm9BOHB6SStuRHM2bG1LeURDTHc3VEtyZzZOdFdUSXI0V0QxYUJ6MHNmYWNDcmh2TkdaTmtFOGxxUmMrT1Z5RkgKZzBHNmJKOCtISkNnMDFjQS9BQ0tzUE5tV1FLQmdRRC9lNFhWc3FzUlNSYzZYZDQ4NmdBOGh6cXFjdVBiQUF1QgpuZTJhbWRNeEdlcEJIRy83K0ttdE1Ka3FtNFNRc2lKalFQMSs3RlhDallYelMrdENzVU00TVlicGF5djlaNDNBClBhTWRRazU0VUljRVJxelg1czQwNVFUR2lmZGZ3ZGZseFN0N1lmaTM1Uml5bTAvZjhHWHhud3Y3eWRJOE90SVoKUnlIRkNmRGJyUUtCZ1FETnF1bHB0MlJIS2hYS0ZjVkp3R3JhUzZRU29vUEFBWlRCdjMzQ2ZDeURJNnV5dFdsaAo3ZDdrZXdCM1J5K0Y4Rkh5N3Z2TTd4K1VOWFpLMnd5bGFtM213d1phQzJZWkMyZ21pbWV4S0NqNFcxdXJJcUFGCk0zRUlmRDMxTVhET0R5Vm94RW1WdWpQeUpIaEF0TjFvZVVaQnNqY1laVVRLN0ZrS2QvaHRRdzA2WVFLQmdBZUUKRXNQZXBibTBkTUo2MEhicVMyZDhjdlZndStOTmRRa3pKREpRSkM1bG5NYWRsNDNLR3ZQRllqd21weGU2cGRoVgpxUjk2eEdzY3pyd0JsOEkyaE11NmFVV2txWDZpOVVDYWo1bmt3WG80cEVBejlCSEY4SHNONGI0VmdQbUlNbG5JCkd5ZGVFbnNXZWt1RzFpcTRYOGRqN201UjJhVjc5WUpZM1YxMmxXZGhBb0dCQU05cEkvQVRIL0hyZ1JlaHI0Q0QKWDhkQWpkKzVlT0d6aVpZWEozbUhSSUJRdG43TlZVSTdSVFhwYllLRmRRWndoN1JhVjNkdUFMYjRndkQ0SDk2cApQWDdIazRaUHk2L2hnQzBRaXl1T2RJbXNWNHpBNndINmlpY3BucXhDMTcwRSthVnRFdlIzZ3daSmxXQTJVQit4CjFMT2k3QmZmZ2xyTHRBbE5rZlVBc1haMAotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo=
 ---
 # Source: gitops-helm/templates/gitops-agent/secret.yaml
 apiVersion: v1
@@ -311,7 +311,7 @@ metadata:
 data:
   admin.enabled: "true"
   application.instanceLabelKey: argocd.argoproj.io/instance
-  cluster.inClusterEnabled: "true"
+  cluster.inClusterEnabled: "false"
   exec.enabled: "false"
   helm.valuesFileSchemes: secrets+gpg-import, secrets+gpg-import-kubernetes, secrets+age-import, secrets+age-import-kubernetes,
     secrets,secrets+literal, https
@@ -21056,188 +21056,6 @@ spec:
     served: true
     storage: true
 ---
-# Source: gitops-helm/templates/argocd-application-controller/clusterrole.yaml
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: argocd-application-controller-argocd
-  labels:
-    helm.sh/chart: gitops-helm-1.1.12
-    app.kubernetes.io/name: argocd-application-controller
-    app.kubernetes.io/instance: argocd
-    app.kubernetes.io/component: application-controller
-    app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.83.1"
-rules:
-  - apiGroups:
-    - '*'
-    resources:
-    - '*'
-    verbs:
-    - '*'
-  - nonResourceURLs:
-    - '*'
-    verbs:
-    - '*'
----
-# Source: gitops-helm/templates/argocd-repo-server/clusterrole.yaml
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: argocd-repo-server-argocd
-  labels:
-    helm.sh/chart: gitops-helm-1.1.12
-    app.kubernetes.io/name: argocd-repo-server
-    app.kubernetes.io/instance: argocd
-    app.kubernetes.io/component: repo-server
-    app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.83.1"
-rules:
-  - apiGroups:
-    - '*'
-    resources:
-    - '*'
-    verbs:
-    - '*'
-  - nonResourceURLs:
-    - '*'
-    verbs:
-    - '*'
----
-# Source: gitops-helm/templates/gitops-agent/clusterrole.yaml
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: gitops-agent-agent
-  labels:
-    helm.sh/chart: gitops-helm-1.1.12
-    app.kubernetes.io/name: harness-gitops-agent
-    app.kubernetes.io/instance: argocd
-    app.kubernetes.io/component: gitops-agent
-    app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.83.1"
-rules:
-  - apiGroups:
-      - '*'
-    resources:
-      - '*'
-    verbs:
-      - delete
-      - get
-      - patch
-      - watch
-      - list
-  - apiGroups:
-      - ""
-    resources:
-      - events
-    verbs:
-      - list
-  - apiGroups:
-      - ""
-    resources:
-      - pods
-      - pods/log
-    verbs:
-      - get
-  - apiGroups:
-      - argoproj.io
-    resources:
-      - applications
-      - applicationsets
-      - appprojects
-    verbs:
-      - get
-      - list
-      - update
-      - watch
-      - create
-      - patch
-      - delete
-  - apiGroups:
-      - batch
-    resources:
-      
-      - jobs
-    verbs:
-      - create
-  - apiGroups:
-      - argoproj.io
-    resources:
-      - workflows
-    verbs:
-      
-      - create
----
-# Source: gitops-helm/templates/argocd-application-controller/clusterrolebinding.yaml
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: argocd-application-controller-argocd
-  labels:
-    helm.sh/chart: gitops-helm-1.1.12
-    app.kubernetes.io/name: argocd-application-controller
-    app.kubernetes.io/instance: argocd
-    app.kubernetes.io/component: application-controller
-    app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.83.1"
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: argocd-application-controller-argocd
-subjects:
-- kind: ServiceAccount
-  name: argocd-application-controller
-  namespace: argocd
----
-# Source: gitops-helm/templates/argocd-repo-server/clusterrolebinding.yaml
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: argocd-repo-server-argocd
-  labels:
-    helm.sh/chart: gitops-helm-1.1.12
-    app.kubernetes.io/name: argocd-repo-server
-    app.kubernetes.io/instance: argocd
-    app.kubernetes.io/component: repo-server
-    app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.83.1"
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: argocd-repo-server-argocd
-subjects:
-- kind: ServiceAccount
-  name: argocd-repo-server
-  namespace: argocd
----
-# Source: gitops-helm/templates/gitops-agent/clusterrolebinding.yaml
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: gitops-agent-agent
-  labels:
-    helm.sh/chart: gitops-helm-1.1.12
-    app.kubernetes.io/name: harness-gitops-agent
-    app.kubernetes.io/instance: argocd
-    app.kubernetes.io/component: gitops-agent
-    app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/part-of: harness-gitops
-    app.kubernetes.io/version: "v0.83.1"
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: gitops-agent-agent
-subjects:
-- kind: ServiceAccount
-  name: gitops-agent
-  namespace: argocd
----
 # Source: gitops-helm/charts/argo-cd/templates/argocd-application-controller/role.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -22168,7 +21986,7 @@ spec:
     metadata:
       annotations:
         checksum/cmd-params: 5ca5173ee1646c7a7df6656b11cec4ca44f97a917f83ee8c71da84aba8ffc37a
-        checksum/cm: 9b69bc40309540df2106dfa331ebe61c43c29f02b94cb9b55d0f62f87be1ec02
+        checksum/cm: f74ca9cae8893785d3813c1efe04c8c29308392a6553569e0de49b4ed531054e
       labels:
         helm.sh/chart: argo-cd-6.7.18
         app.kubernetes.io/name: argocd-repo-server
@@ -22572,7 +22390,7 @@ spec:
     metadata:
       annotations:
         checksum/cmd-params: 5ca5173ee1646c7a7df6656b11cec4ca44f97a917f83ee8c71da84aba8ffc37a
-        checksum/cm: 9b69bc40309540df2106dfa331ebe61c43c29f02b94cb9b55d0f62f87be1ec02
+        checksum/cm: f74ca9cae8893785d3813c1efe04c8c29308392a6553569e0de49b4ed531054e
       labels:
         helm.sh/chart: argo-cd-6.7.18
         app.kubernetes.io/name: argocd-server
@@ -23047,7 +22865,7 @@ spec:
   template:
     metadata:
       annotations:
-        checksum/secrets: cd35629d6a416f76b84033b24ee9906fc5c89e09b3a3d244b82a23c746bbd7f9
+        checksum/secrets: 0a9feb91f8a9c8bc492f60275e4e290716d90c97b0a47f465cfe2653c157a408
       labels:
         helm.sh/chart: gitops-helm-1.1.12
         app.kubernetes.io/name: harness-gitops-agent
@@ -23224,7 +23042,7 @@ spec:
     metadata:
       annotations:
         checksum/cmd-params: 5ca5173ee1646c7a7df6656b11cec4ca44f97a917f83ee8c71da84aba8ffc37a
-        checksum/cm: 9b69bc40309540df2106dfa331ebe61c43c29f02b94cb9b55d0f62f87be1ec02
+        checksum/cm: f74ca9cae8893785d3813c1efe04c8c29308392a6553569e0de49b4ed531054e
       labels:
         helm.sh/chart: argo-cd-6.7.18
         app.kubernetes.io/name: argocd-application-controller
