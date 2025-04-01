@@ -28,7 +28,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 # 2. Kubernetes Setup with kubeadm
-## Here are the instructions to setup a Kubernetes cluster from "scratch" (Alternativly go to https://github.com/kirillyesikov/k8s-from-scratch and install the cluster with Ansible playbook):
+## Here are the instructions to setup a Kubernetes cluster from "scratch" (Alternatively go to https://github.com/kirillyesikov/k8s-from-scratch and install the cluster with Ansible playbook):
 
 ### Container Runtime: containerd
 ### Install containerd and runc:
